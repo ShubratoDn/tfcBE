@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamai Food cart- Fastest fresh fast food restaurent</title>
+
+    <!-- FAVICON OF WEBSITE -->
+    <link rel="shortcut icon" href="resources/img/logo.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="vendor/css/normalize.css">
+    
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/css/bootstrap-grid.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+
+    <!-- Owl carousel  -->
+   <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="vendor/css/owl.theme.default.min.css">
+
+   <!-- DATA AOS -->
+   <link rel="stylesheet" href="vendor/css/aos.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
+</head>
+<body>
+
+        <!-- loader -->
+        <div class="loader-div">
+            <div class="loader"></div>
+        </div>
+        <!-- go to top  -->
+        <button onclick="topFunction()" class="gotop">
+            <i class=" fa fa-angle-up"></i>
+        </button>
+    
+    
+    <!-- header starts -->
+    <header>
+        <nav>
+            <!-- nav top bar -->
+            <div class="nav-top d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <!-- nav-top left -->
+                        <div class="col-10 nav-top-left">
+                            <a href="tel: +8801759458961" class="nav-top-call text-dark"> <i class="text-red fa fa-phone" ></i> &nbsp; +8801759458961</a> 
+                            <a href="mailto: mycomputer44985@gmail.com " class="nav-top-mail ml-sm-5 text-dark"> <i class="text-red fa fa-envelope" ></i> &nbsp; mycomputer44985@gmail.com</a>
+                        </div>
+                        <!-- nav-top Right -->
+                        <div class="col-2 nav-top-right">
+                            <div class="d-flex justify-content-around">
+                                <a href="#"><i class=" fa fa-facebook"></i></a>
+                                <a href="#"><i class=" fa fa-instagram"></i></a>
+                                <a href="#"><i class=" fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar">
+               <div class="container-fluid">
+                    <div class="row w-100">
+                        <div class="col-sm-1 d-flex align-items-center justify-content-center mb-4 mb-sm-0 logo-div">
+                              <!-- logo -->
+                              <a href="index.html">
+                                <img src="resources/img/logo.png" alt="TFC" title="Tamai Food Cart" id="logo">
+                             </a>  
+                        </div>
+                        <div class="col-lg-7 nav-menu-col">
+                            <!-- nav menus -->
+                            <div class="nav-menu">
+                                <ul>
+                                    <li><a href="index.html" data-after="Home">Home</a></li>
+                                    <li class=" dropdown">
+                                        <!-- dropdown menu -->
+                                        <a href="#" data-after="Menu" class=" dropdown-btn">Menu <i class=" fa fa-angle-down"></i>
+                                        </a>
+                                        <!-- dropdown items -->
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#" data-after="Menu">Fast Food</a></li>
+                                                <li><a href="#" data-after="Menu">Dupurer Khabar</a></li>
+                                                <li><a href="#" data-after="Menu">Breakfast</a></li>
+                                                <li><a href="#" data-after="Menu">Dinner</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>                                   
+                                    <li><a href="index.html#our-article" data-after="Articles">Articles</a></li>
+                                    <li><a href="about.html" data-after="About">About</a></li>
+                                    <li><a href="contact.html" data-after="Contact">Contact</a></li>
+                                </ul>
+
+                                <button class="nav-exit-btn"><i class=" fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-10 col-9 nav-extra-col">
+                            <div class="nav-extra">
+                                <!-- nav extra -->
+                                <ul>
+                                    <li>   
+                                        <form action="#" method="get" class="searchbar">
+                                            <!-- Search bar -->
+                                            <div class="search-group d-flex">
+                                                <input type="text" placeholder="Search food" class=" search-input">
+                                                <button type="submit" name="submit" class="fa fa-search search-btn">
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li title="user">
+                                        <button class="preventListener user" onclick="showModal()">
+                                            <i class=" fa fa-user"></i>                                            
+                                        </button>
+                                    </li>
+                                    <li title="cart">
+                                        <a href="#" class="cart">
+                                            <i class=" fa fa-shopping-basket"></i>
+                                            <div class="cart-number">2</div>
+                                        </a>
+                                    </li>
+                                    <li title="wishlist">
+                                        <a href="#" class="wishlist">
+                                            <i class=" fa fa-heart"></i>
+                                            <div class="wishlist-number">0</div>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 hamburger">
+                            <i class=" fa fa-bars"></i>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </nav>
+
+        <!--LOGIN modal box -->    
+        <div class="modal-box">
+            <!-- LOGIN FORM -->
+            <div class="login">
+                <form action="#" class="login-form">
+                    <h2 class=" text-center login-title">Login</h2>
+                    <input type="text" placeholder="Phone or Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" name="submit" value="Login" class=" login-submit">
+                    <p class=" text-muted">Don't have an account? <a href="#" class="text-red">Sign up</a></p> 
+                    <p><a href="#" class=" text-red">Forgot Password</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- modal box end -->
+        
+    </header>
+    <!-- header ends -->
+
+
+    <!-- main section starts  -->
+    <main>
+        <!-- page banner starts -->
+        <div class="page-banner contact-banner">
+            <h1 class="banner-text">Contact Us</h1>
+        </div>
+        <!-- page banner Ends -->
+
+        <!-- contact card starts -->
+        <section id="contact-cards">
+            <div class="container-fluid">
+                <!-- contact card -->
+                <div class="contact-card">
+                    <i class=" fa fa-map-marker contact-icon"></i>
+                    <h2>Addresss</h2>
+                    <p>123 6th eight avenue FL 32904 , 455
+                        <br>
+                        Sirajganj, Bangladesh
+                    </p>
+                </div>
+                <!-- contact card -->
+                <div class="contact-card">
+                    <i class=" fa fa-envelope contact-icon"></i>
+                    <h2>Email</h2>
+                    <p>
+                        <a href="mailto:mycomputer44985@gmail.com">mycomputer44985@gmail.com</a>
+                        <br>
+                        <a href="mailto:mycomputer44985@gmail.com">mycomputer44985@gmail.com</a>
+                    </p>
+                </div>
+                <!-- contact card -->
+                <div class="contact-card">
+                    <i class=" fa fa-phone contact-icon"></i>
+                    <h2>Phone</h2>
+                    <p>
+                        <a href="tel:0175945861">+880175945961</a>
+                        <br>
+                        <a href="tel:0175945961">+880175945961</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- contact card Ends -->
+     
+        <!-- Get in Touch section -->
+        <section id="contact-form">
+            <div class="container-fluid">
+                <!-- conact form starts -->
+                <form action="#" method="post" class=" contact-form">
+                    <h1 class=" mb-5">Get In Touch</h1>
+                    <input type="text" placeholder="Your name"> 
+                    <input type="email" placeholder="Your email"> 
+                    <input type="text" placeholder="Subject"> 
+                    <textarea name="" placeholder="Write your message..."></textarea>
+                    <input type="submit" value="Send" class=" my-5">
+                </form>
+                <!-- conact form Ends -->
+            </div>
+        </section>
+        <!-- Get in Touch section Ends -->
+
+        <!-- map -->
+        <div id="contact-map" class="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10282.99640726409!2d89.68516867781835!3d24.325993546071643!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x155b0dae04581868!2sTFC-Tamai%20Food%20Cart!5e0!3m2!1sen!2sbd!4v1634194795464!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- map -->
+
+        
+    </main>
+    <!-- main section Ends -->
+
+    
+    <!-- footer starts -->
+    <footer id="footer"> 
+        <div class="footer-body">
+            <div class="container-fluid py-5">
+                <div class="row pt-5">
+                    <!-- contact us -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4 foot-contact">
+                        <h1>CONTACT US</h1>
+                        <p><i class=" fa fa-map-marker pr-3"></i><b>Headquerter : </b> <a href="#">Belkuchi, Sirajganj</a></p>
+                        <p><i class=" fa fa-envelope pr-2"></i><b>Email : </b><a href="mailto: mycomputer44985@gmail.com" >mycomputer44985@gmail.com</a></p>
+                        <p><i class=" fa fa-phone pr-3"></i><b>Tel : </b><a href="tel: 01759458961" >01759458961</a></p>
+                    </div>
+                    <!-- services -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Customer Services</h1>
+                        <p><a href="#">Privacy Policy</a></p>
+                        <p><a href="#">Cookie Policy</a></p>
+                        <p><a href="#">Purchasing Policy</a></p>
+                        <p><a href="#">Terms & Conditions</a></p>
+                    </div>
+                    <!-- additional links -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Information</h1>
+                        <p><a href="#">About us</a></p>
+                        <p><a href="#">Contact us</a></p>
+                    </div>
+                    <!-- Get In TOuch -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Get in Touch</h1>
+                        <p class="social-links">
+                            <a href="#"><i class=" fa fa-facebook"></i></a>
+                            <a href="#"><i class=" fa fa-twitter"></i></a>
+                            <a href="#"><i class=" fa  fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-end py-4">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center align-items-center">                        
+                        &copy; 2021 All Rights Reserved <span class=" text-red"> || </span> Design & Developed by <span class="text-white" style=" cursor:pointer"> &nbsp;Shubrato Debnath</span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer Ends -->
+
+        
+        
+
+
+<!-- ================javascript links=================== -->
+    <!-- vendor js -->
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/popper.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="vendor/js/bootstrap.min.js"></script>
+    
+    <script src="vendor/js/html5shiv.min.js"></script>
+    <script src="vendor/js/respond.min.js"></script>
+
+
+    <!-- owl carousel -->
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <!-- DATA AOS -->
+    <script src="vendor/js/aos.js"></script>
+
+    <!-- custom js -->
+    <script src="resources/js/main.js"></script>
+
+
+
+</body>
+</html>

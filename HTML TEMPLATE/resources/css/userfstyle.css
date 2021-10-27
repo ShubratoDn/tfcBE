@@ -1,0 +1,56 @@
+#user-register{
+    background-color: #f2f2f2 ;
+    padding: 4rem 0;
+}
+
+#register{
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem 5rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+#register h1{
+    text-align: center;
+}
+
+#register .input-group{
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+#register .input-group label{
+    color: #5e5c5c;
+}
+
+#register .input-group input{
+    border: 1px solid #a8a8a8b9;
+    border-radius: .5rem;
+}
+
+#register p{
+    margin-top: 5rem;
+    font-weight: bolder;
+}
+
+#register input[type="submit"]{
+    border: none;
+    font-size: 1.6rem;    
+    border-radius: .5rem;
+    color: white;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.767);
+    transition: all .5s;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+#register input[type="submit"]:hover{
+    color: black;
+    background-color: rgb(241, 240, 240);
+}
+
+#register small{
+    display: none;
+}

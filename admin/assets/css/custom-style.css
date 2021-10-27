@@ -1,0 +1,27 @@
+.insert-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group{
+    width: 100%;
+}
+
+.alert-danger p{
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.alert-danger p:first-child{
+    padding-top: 1rem;
+}
+.alert-danger p:last-child{
+    padding-bottom: 1rem;
+}
+
+@media (min-width:768px) {
+    .w-48{
+        width: 48%;
+    }
+}
