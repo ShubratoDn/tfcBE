@@ -163,7 +163,7 @@
 
                                   <datalist id="cat_srch_list">
                                     <?php
-                                        $cat_sql = "SELECT * FROM `catagory`";
+                                        $cat_sql = "SELECT * FROM `catagory` ORDER BY cat_name ASC";
                                         $cat_result = mysqli_query($con, $cat_sql);
 
                                         if(mysqli_num_rows($cat_result)>0){

@@ -423,24 +423,16 @@ $('#our-article .owl-carousel').owlCarousel({
 /* ====================================== */
         /*PRODUCT QUANTITY BUTTON */
 /* ====================================== */
-var quanUp = document.querySelector(".quan-up");
-var quanDown = document.querySelector(".quan-down");
-var quanInput = document.querySelector(".quan-input");
-
 try{
-    quanUp.addEventListener('click', function(e){
-        quanInput.value++
-    if(quanInput.value >=9){
-        quanInput.value = 9
-    }
+
+    // Quantity measurement
+    $(document).on('click', '.quan-up', function () {
+        if($(this).prev().val() < 10){$(this).prev().val(+$(this).prev().val() + 1);}
+    });
+    $(document).on('click', '.quan-down', function () {
+        if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
     });
 
-    quanDown.addEventListener('click', function(e){
-        quanInput.value--
-    if(quanInput.value <=0){
-        quanInput.value = 0
-    }
-    });
 }catch(err){
     console.log(err);
 }

@@ -1,5 +1,14 @@
 <?php
     session_start();
+ 
+    $food_id = $_GET["item_id"];
+    if(!isset($food_id)){
+        ?>
+            <script>
+                location.replace("<?php echo "index.php"?>");
+            </script>
+        <?php 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +22,7 @@
     <?php
         //INCLUDING HEAD LINKS
         include(@$adRedirect."_partial-temp/_head-link.php");
+    
     ?>
 
     <style>
@@ -29,14 +39,64 @@
     ?>
 
 
+    <!-- =========================== -->
+            <!-- ADD TO CART -->
+    <!-- =========================== -->
+    <?php
+
+        if(isset($_POST["add_to_cart"])){
+
+            // checking for login
+            if(isset($_SESSION['user_id'])){
+                $_SESSION["myCart"][] = array(
+                    'cid'=> $_POST['cart_id'],
+                    'cname' => $_POST['cart_name'],
+                    'ccat' => $_POST['cart_cat'],
+                    'cimg'=> $_POST['cart_img'],
+                    'cdisPrice'=> $_POST['cart_disprice'],
+                    'cprice'=> $_POST['cart_price'],
+                    'cdisc'=> $_POST['cart_disc'],
+                    'cqty'=> $_POST['cart_qty'],
+                );
+                
+                ?>
+                    <script>
+                        location.replace("item.php?item_id=<?php echo $_POST['cart_id']?>");
+                    </script>
+                <?php
+            }else{
+                ?>
+                <!-- if not logged in then show the login modal -->
+                    <script>
+                        var modal = document.querySelector(".modal-box");
+                        modal.style.display = "flex";
+                    </script>
+                <?php
+            }
+
+            
+            
+        }
+
+
+    
+    ?>
+    <!-- =========================== -->
+            <!-- ADD TO CART ENDS-->
+    <!-- =========================== -->
+
+
+
     <?php 
-        $food_id = $_GET["item_id"];
+        @$food_id = $_GET["item_id"];
         $sql = "SELECT * FROM `item_info` WHERE item_id='$food_id'";
         $result = mysqli_query($con, $sql);
 
-        if(mysqli_num_rows($result) == 1){
-            $row = mysqli_fetch_assoc($result);
 
+        // GETTING PRODUCT INFO
+        if(mysqli_num_rows($result) == 1){
+
+            $row = mysqli_fetch_assoc($result);
             
             // fot item category
             $cat_id = $row["item_cat_id"];
@@ -100,8 +160,10 @@
 
                                 <hr>
 
-                                <!-- FORM STARTS -->
-                                <form action="#">
+                                <!--=================================-->
+                                <!-- ADD TO CART FORM STARTS -->
+                                <!--=================================-->
+                                <form action="#" method="POST">
                                     <!-- quantity section -->
                                     <div class="quantity-div d-flex align-items-center justify-content-between">
                                         <div>
@@ -109,18 +171,47 @@
                                         </div>
                                         <div class="quantity">
                                             <i class="fa fa-minus quan-down"></i>
-                                            <input type="number" name="" id="" value="0" class="quan-input" disabled>
+                                            <input type="number" name="cart_qty" value="1" min="1" max="10" class="quan-input" >
                                             <i class="fa fa-plus quan-up"></i>
                                         </div>
                                     </div>
                                     <!-- <small class=" text-danger">This is a short message</small> -->
+                                    
+                                    <!-- ADDITIONAL INPUT -->
+                                    <input type="hidden" name="cart_id" value="<?php echo $row["item_id"]?>">
+                                    <input type="hidden" name="cart_name" value="<?php echo $row["item_name"]?>">
+                                    <input type="hidden" name="cart_cat" value="<?php echo $category?>">
+                                    <input type="hidden" name="cart_img" value="<?php echo $row["item_img"]?>">
+                                    <input type="hidden" name="cart_disprice" value="<?php echo $disPrice?>">
+                                    <input type="hidden" name="cart_price" value="<?php echo $price;?>">
+                                    <input type="hidden" name="cart_disc" value="<?php echo $discount;?>">
 
                                     <div class="cart-buy">
                                         <input type="submit" value="Buy Now" class="buy-btn">
-                                        <input type="submit" value="Add to Cart" class="add-cart-btn">
+
+                                        <?php
+                                        // SHowing Add to cart buutton
+                                            $showCartBtn = true;
+                                            if(isset($_SESSION['myCart'])){
+                                                foreach($_SESSION['myCart'] as $key => $item){
+                                                    if($food_id == $item['cid']){
+                                                        echo '<a href="cart.php" class="add-cart-btn text-decoration-none text-white" style="padding-top:8px;padding-bottom:8px">View Cart</a>';
+                                                        $showCartBtn = false;
+                                                    }
+                                                }
+                                            }
+
+                                            if($showCartBtn){
+                                                echo '<input type="submit" value="Add to Cart" class="add-cart-btn" name="add_to_cart">';
+                                            }
+
+                                        ?>
+                                        
                                     </div>
                                 </form>
                                 <!-- FORM Ends -->
+
+                                
                                 <hr>
                                 <div class="prob-req">
                                     <small class=" font-weight-bold">Have questions about product no: <?php echo $row["item_id"]?> ?</small>
@@ -143,6 +234,18 @@
                     </div>
                 </div>
 
+                <?php 
+                    // unset($_SESSION['myCart']);
+                    if(isset($_SESSION["myCart"])){
+                        // foreach($_SESSION["myCart"] as $item){
+                        //     echo  $item['cid'] ."<br>";
+                        //     echo  $item['cname'] ."<br>";
+                        //     echo  $item['cqty'] ."<br>";
+                        //     echo  "<hr>";
+                        // }
+                        // print_r($_SESSION['myCart']);
+                    }
+                ?>
 
 
                 <!-- product bottom section starts -->
@@ -326,9 +429,11 @@
                         </div>
                     </div>
                 </div>
+                <a href="#">Share your feedbacks</a>
             </div>
         </section>
         <!-- item info section Ends -->
+
 
     <?php
         }else{

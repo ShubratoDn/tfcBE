@@ -87,12 +87,15 @@
                               $category = filter_var($category,FILTER_SANITIZE_STRING);
                               $item_price = filter_var($item_price,FILTER_SANITIZE_NUMBER_INT);
                               $discount = filter_var($discount,FILTER_SANITIZE_NUMBER_INT);
-                              $rate = filter_var($rate,FILTER_SANITIZE_NUMBER_INT);
+                              // $rate = filter_var($rate,FILTER_SANITIZE_NUMBER_FLOAT);
                               $chefs = filter_var($chefs,FILTER_SANITIZE_STRING);
                               $ingredients = filter_var($ingredients,FILTER_SANITIZE_STRING);
                               $about_item = filter_var($about_item,FILTER_SANITIZE_STRING);
 
 
+                              if(!$rate){
+                                $rate = 5;
+                              }
 
                               // ITEM IMAGE SIZE SETTING
                               if($img_size>1000){
@@ -181,7 +184,7 @@
                                       <option value="">~~ CHOOSE CATEGORY ~~</option>
                                       <!-- ADDING CATEGORIES OPTION -->
                                       <?php
-                                        $cat_sql = "SELECT * FROM `catagory`";
+                                        $cat_sql = "SELECT * FROM `catagory` ORDER BY cat_name ASC";
                                         $cat_result = mysqli_query($con, $cat_sql);
                                         if(mysqli_num_rows($cat_result)>0){
                                           while($cat_row = mysqli_fetch_assoc($cat_result)){
@@ -210,7 +213,7 @@
                               <!-- Initial Rate -->
                               <div class="form-group w-48">
                                   <label for="Initial Rating">Initial Rating <span style=" color: #818e8e">(out of 5)</span></label>
-                                  <input type="number" value="5" name="rate" max="5" min="0" class="form-control" id="Initial Rating" placeholder="" value="5">
+                                  <input type="number" value="<?php if(isset($error)){echo $rate; }?>" name="rate" step="0.1" max="5" min="0" class="form-control" id="Initial Rating" placeholder="1 to 5" >
                               </div>
 
                               <!-- Chef Name -->

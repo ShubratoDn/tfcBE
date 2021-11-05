@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2021 at 07:47 PM
+-- Generation Time: Oct 31, 2021 at 07:26 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -304,7 +304,7 @@ CREATE TABLE `pma__recent` (
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"tfc\",\"table\":\"item_info\"},{\"db\":\"tfc\",\"table\":\"catagory\"},{\"db\":\"tfc\",\"table\":\"user_feedback\"},{\"db\":\"tfc\",\"table\":\"user_info\"},{\"db\":\"blood bank\",\"table\":\"donor_info\"},{\"db\":\"blood bank\",\"table\":\"need_blood\"},{\"db\":\"tfc\",\"table\":\"admin\"}]');
+('root', '[{\"db\":\"tfc\",\"table\":\"item_info\"},{\"db\":\"tfc\",\"table\":\"user_info\"},{\"db\":\"shopee\",\"table\":\"cart\"},{\"db\":\"webmentor\",\"table\":\"users\"},{\"db\":\"tfc\",\"table\":\"admin\"},{\"db\":\"tfc\",\"table\":\"catagory\"},{\"db\":\"tfc\",\"table\":\"user_feedback\"},{\"db\":\"blood bank\",\"table\":\"donor_info\"},{\"db\":\"blood bank\",\"table\":\"need_blood\"}]');
 
 -- --------------------------------------------------------
 
@@ -411,7 +411,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2021-10-26 17:46:16', '{\"Console\\/Mode\":\"collapse\"}');
+('root', '2021-10-31 18:26:08', '{\"Console\\/Mode\":\"collapse\"}');
 
 -- --------------------------------------------------------
 
@@ -653,7 +653,9 @@ INSERT INTO `catagory` (`cat_id`, `cat_name`, `cat_img`) VALUES
 (8, 'chicken', '9f09c51e250b5bd59811download.jpg'),
 (9, 'Pizza', '2af7b4a94eef8ae4063ecatagory1.jpg'),
 (10, 'burger', 'cec60c7a0eb950aa634acatagory2.jpg'),
-(11, 'biriyani', 'c3250d155a5132ea08d6catagory4.jpg');
+(11, 'biriyani', 'c3250d155a5132ea08d6catagory4.jpg'),
+(12, 'potato dish', '184520025951e9bf3dfc1504289038-delish-cheesy-garlic-butter-potatoes-still003.jpg'),
+(13, 'sandwich', '3d51cb4191ebe98819a6paneer-bhurji-sandwich.jpg');
 
 -- --------------------------------------------------------
 
@@ -681,10 +683,16 @@ CREATE TABLE `item_info` (
 --
 
 INSERT INTO `item_info` (`item_id`, `item_name`, `item_cat_id`, `item_img`, `item_price`, `item_discount`, `item_rating`, `item_t_review`, `item_info_text`, `chef_name`, `ingredients`, `upload_date`) VALUES
-(1, 'WAFFLE FRIES CHICK-FIL-A', 4, 'food2.jpg', 100, 10, 4.5, 200, 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, ipsa iure aliquid magnam a voluptatem harum laborum fugit ex placeat mollitia nisi inventore officia ipsum quae repellendus dolor, quis, adipisci consequuntur possimus neque ea? Omnis culpa facere doloribus accusamus amet dolor eligendi maxime minima pariatur repellat, fuga vitae, odit voluptatum non nisi vel ducimus. Doloribus adipisci nisi omnis perferendis quod beatae corporis ad, necessitatibus, illum odio, maiores earum ullam voluptas pariatur? Repellendus dicta magni perferendis, enim exercitationem impedit dolores molestiae aliquid voluptatibus, fuga maiores quibusdam est voluptas ducimus adipisci voluptates ipsam nihil! Voluptatum dignissimos odit, numquam exercitationem natus, amet modi magni error distinctio nobis molestiae eaque! Saepe, recusandae provident consequatur architecto voluptatibus tempora magnam. Eos fugit veniam atque, quidem non ex animi dolor nisi, possimus nostrum, quas quis ut velit veritatis', 'shubrato Debnath, Akash ', 'Potato, oil, water', '0000-00-00'),
 (8, 'Creamy burger', 2, 'b4b2bf15f46a4682a23acreamy burger.jpg', 120, 10, 5, 0, 'creamy burger', 'Shubrato Debnath', '------------', '2021-10-24'),
 (9, 'Bombay  biriyani', 3, '0ed2d3d3471fbdcbb5a9c779cbb0c534ee1dab89a350e833fca0 (1).jpeg', 250, 5, 5, 0, 'What makes Bombay biryani special is the use of potatoes in it.Be it vegetarian or non-vegetarian biryani, potato is a must. The preparation uses a layered method, where half-cooked basmati rice and cooked meat are put on dum-style.', 'Shubrato Debnath', '', '2021-10-24'),
-(10, 'Veggie Burgers', 10, 'f055bef950f96ecfee6cmaxresdefault.jpg', 95, 2, 5, 0, '', '', '', '2021-10-26');
+(10, 'Veggie Burgers', 10, 'f055bef950f96ecfee6cmaxresdefault.jpg', 95, 2, 5, 0, '', '', '', '2021-10-26'),
+(11, 'Aloo posto', 12, '153f6d6aa5de2b0a4d01Aloo-Posto-1-3.jpg', 60, 8, 5, 0, 'a special dish which is most favourite by all of Bengali People. ', 'Tonushree', 'aloo', '2021-10-27'),
+(12, 'Aloo gosht', 12, 'f3da8057d1722fb821a2download.jpg', 150, 15, 5, 0, 'Aloo gosht is a meat curry, originating from the Indian subcontinent, and popular in Pakistani, Bangladeshi and North Indian cuisine. It consists of potatoes (aloo) cooked with meat (gosht), usually lamb or mutton or beef, in a stew-like shorba gravy.', 'Tonushree', '', '2021-10-27'),
+(13, 'Paneer Bhurji Sandwich', 13, '2a3f0e4efc4dc698a3d8paneer-bhurji-sandwich.jpg', 120, 6, 5, 0, '', 'Tonushree Mukharji', '', '2021-10-27'),
+(14, 'Egg Sandwich', 13, 'a78af98ba4ea76008921EasterEggSandwichSmall2-720x540.jpg', 80, 2, 5, 0, 'An egg sandwich is a sandwich with some kind of cooked egg filling. Fried eggs, scrambled eggs, sliced boiled eggs and egg salad are popular options. In the fourth case, it may be called an egg salad sandwich.', 'Tonushree Mukharji', '', '2021-10-27'),
+(15, 'Crispy Fried chicken burger', 10, '1752357d2dd1d71f3bcddownload.jpg', 120, 11, 5, 0, 'This burger consists of a super crispy & flakey chicken patty made out of the special blend of Knorr Coating Mix top with Hellmann&#39;s Classic Mayonnaise', 'Ali Akber', '', '2021-10-27'),
+(16, 'Thai chicken toast', 8, '79f56274438740cff821maxresdefault.jpg', 80, 10, 5, 0, '', 'Ali Akber', '', '2021-10-27'),
+(17, 'Grilled Chicken Sandwich', 10, '076d7197a30030849166download.jpg', 285, 10, 5, 0, '', 'Tonushree Mukharji, Shubrato Debnath', '', '2021-10-27');
 
 -- --------------------------------------------------------
 
@@ -770,13 +778,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `catagory`
 --
 ALTER TABLE `catagory`
-  MODIFY `cat_id` int(101) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `cat_id` int(101) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `item_info`
 --
 ALTER TABLE `item_info`
-  MODIFY `item_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `item_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user_info`

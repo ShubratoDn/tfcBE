@@ -10,221 +10,90 @@
                 <hr class=" mb-5">
                 
                 <div class="deserts item-container">
-                    <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food7.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
-                        </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                                Apple pie
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳300</div>
-                                    <div class="c-price">৳280</div>
-                                </div> 
-                            </div>
-                        </div>        
-
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
-                                </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
                     
                     <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food8.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
-                        </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                                Almond Malai Kulfi
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳150</div>
-                                    <div class="c-price">৳120</div>
-                                </div> 
-                            </div>
-                        </div>        
+                    <?php
 
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
+                        $sql = "SELECT * FROM `item_info` WHERE item_cat_id='14' ORDER BY item_id DESC";
+                        $result = mysqli_query($con, $sql);
+
+                        if(mysqli_num_rows($result)){
+                            $count = 1;
+
+                            while($row = mysqli_fetch_assoc($result)){
+                                $count ++;
+                                if($count >11){
+                                    break;
+                                }
+
+                            $price = $row["item_price"];
+                            $discount = $row["item_discount"];
+                            $disPrice = ($price * $discount)/100;
+                            $disPrice = round($price - $disPrice );
+                            $rating = $row["item_rating"];
+                            $cat_id = $row["item_cat_id"];
+
+                            $cat_sql = "SELECT * FROM `catagory` WHERE cat_id = '$cat_id'";
+                            $cat_result = mysqli_query($con,$cat_sql);
+                            if(mysqli_num_rows($cat_result)>0){
+                                $cat_row = mysqli_fetch_assoc($cat_result);
+                                $category = $cat_row["cat_name"];
+                            }else{
+                                $category = "Uncategorized";
+                            };
+                    ?>
+
+
+                        <div class="food-item">
+                            <div class="item-img-div">
+                                <!-- food img -->
+                                <img src="<?php echo $adRedirect."resources/img/item_img/".$row["item_img"];?>" alt="" class="item-img">
+                                <!-- item info -->
+                                <a href="item.php?item_id=<?php echo $row["item_id"]?>" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                            </div>
+                            <div class="discount">
+                                -<?php echo $discount?>%
+                            </div>
+                            <div class="item-info">
+                                <div class="item-name">
+                                    <!-- item name -->
+                                    <?php echo ucfirst(strtolower($row['item_name'])) ?>
                                 </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
+                                <div class="item-pri-cat">
+                                    <!-- item category -->
+                                    <div class="item-catagory"><?php echo @$category?></div>
 
-                    <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food9.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
-                        </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                                Coconut Kheer
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳150</div>
-                                    <div class="c-price">৳120</div>
-                                </div> 
-                            </div>
-                        </div>        
-
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
+                                    <!-- item price -->
+                                    <div class="price">
+                                        <div class="del-price">৳<?php echo $price?></div>
+                                        <div class="c-price">৳<?php echo @$disPrice?></div>
+                                    </div> 
                                 </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
+                            </div>        
 
-                    <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food10.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                            <div class="item-card-footer">                                            
+                                <div class="item-rate">                                                
+                                    <div class="rating">
+                                        <!-- deal rating -->
+                                        <?php include($adRedirect)."_partial-temp/_item-rating.php"?>
+                                    </div>
+                                    <div class="item-review"> <?php echo $row["item_t_review"]?> Reviews</div>
+                                </div>                                                                                                       
+                            </div>
                         </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                                Chocolate Coffee Truffle
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳280</div>
-                                    <div class="c-price">৳250</div>
-                                </div> 
-                            </div>
-                        </div>        
 
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
-                                </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
+                    <?php
 
-                    <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food11.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
-                        </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                               Vanilla ice cream
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳80</div>
-                                    <div class="c-price">৳75</div>
-                                </div> 
-                            </div>
-                        </div>        
+                            } //end  of while
+                        } //end of if
 
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
-                                </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
-
-                    <!-- food item card -->
-                    <div class="food-item">
-                        <div class="item-img-div">
-                            <img src="resources/img/food12.jpg" alt="" class="item-img">
-                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
-                        </div>
-                        <div class="item-info">
-                            <div class="item-name">
-                               RoshoGolla
-                            </div>
-                            <div class="item-pri-cat">
-                                <div class="item-catagory">desert</div>
-                                <!-- item price -->
-                                <div class="price">
-                                    <div class="del-price">৳260</div>
-                                    <div class="c-price">৳250</div>
-                                </div> 
-                            </div>
-                        </div>        
-
-                        <div class="item-card-footer">                                            
-                            <div class="item-rate">                                                
-                                <div class="rating">
-                                    <!-- deal rating -->
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star"></i>
-                                    <i class=" fa fa-star-o"></i>
-                                </div>
-                                <div class="item-review">2144 Reviews</div>
-                            </div>                                                                                                       
-                        </div>
-                    </div>
+                    ?>
       
                 </div>                
 
                 <!-- see more btn -->
                 <div class="see-more">
-                    <a href="https://www.google.com" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
+                    <a href="all_item.php?type=Our Deserts && cat=14" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
                 </div>
             </div>
         </section>

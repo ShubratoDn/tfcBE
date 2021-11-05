@@ -14,7 +14,7 @@
             <!-- food item card -->
             <?php
 
-                $sql = "SELECT * FROM `item_info`";
+                $sql = "SELECT * FROM `item_info` ORDER BY item_id DESC";
                 $result = mysqli_query($con, $sql);
 
                 if(mysqli_num_rows($result)){

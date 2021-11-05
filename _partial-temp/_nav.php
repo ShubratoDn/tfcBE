@@ -5,7 +5,7 @@
 
     <!-- go to top  -->
     <button onclick="topFunction()" class="gotop">
-        <i class=" fa fa-angle-up"></i>
+        <i class=" fa fa-angle-double-up"></i>
     </button>
     
     <!-- header starts -->
@@ -112,9 +112,15 @@
 
                                     </li>
                                     <li title="cart">
-                                        <a href="<?php echo $adRedirect?>" class="cart">
+                                        <a href="<?php echo $adRedirect."cart.php"?>" class="cart">
                                             <i class=" fa fa-shopping-basket"></i>
-                                            <div class="cart-number">2</div>
+                                            <?php
+                                            
+                                                if(isset($_SESSION['myCart'])){
+                                                    echo " <div class='cart-number'>".count($_SESSION['myCart'])."</div>";
+                                                }
+
+                                            ?>
                                         </a>
                                     </li>
                                     <li title="wishlist">
