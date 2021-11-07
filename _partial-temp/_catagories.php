@@ -26,7 +26,7 @@
                                         <img src="<?php echo "resources/img/cat_img/".$row['cat_img'];?>" alt="catagory" class="catagory-img img-thumbnail ">
                                     </div>
                                     <div class="catagory-name">
-                                        <a href="#" class="stretched-link"><?php echo ucfirst($row['cat_name']);?></a>
+                                        <a href="search.php?category=<?php echo $row['cat_name'];?>&&cat_id=<?php echo $row['cat_id'];?>" class="stretched-link"><?php echo ucfirst($row['cat_name']);?></a>
                                     </div>
                                 </div>
                             </div>

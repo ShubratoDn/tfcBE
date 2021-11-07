@@ -57,9 +57,16 @@
             </h1>
         </div>
         <!-- page banner Ends -->
+        
 
-        <div class="container-fluid py-5 mt-5">
-            <div class="item-container">
+        <div class="container-fluid py-5">
+
+            <div>
+                <a href="index.php">Home</a> / 
+                <?php echo $type ?>
+            </div> 
+
+            <div class="item-container mt-5">
                 <!-- food item card -->
                 <?php
 

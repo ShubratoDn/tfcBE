@@ -51,7 +51,7 @@
                                     <li><a href="<?php echo $adRedirect?>index.php" data-after="Home">Home</a></li>
                                     <li class=" dropdown">
                                         <!-- dropdown menu -->
-                                        <a href="#" data-after="Menu" class=" dropdown-btn">Menu <i class=" fa fa-angle-down"></i>
+                                        <a href="#" data-after="Menu" class=" dropdown-btn">Category <i class=" fa fa-angle-down"></i>
                                         </a>
                                         <!-- dropdown items -->
                                         <div class="dropdown-items">
@@ -76,15 +76,12 @@
                             <div class="nav-extra">
                                 <!-- nav extra -->
                                 <ul>
-                                    <li>   
-                                        <form action="#" method="get" class="searchbar">
-                                            <!-- Search bar -->
-                                            <div class="search-group d-flex">
-                                                <input type="text" placeholder="Search food" class=" search-input">
-                                                <button type="submit" name="submit" class="fa fa-search search-btn">
-                                            </div>
-                                        </form>
+                                    <li>
+                                        <?php 
+                                            include($adRedirect."_partial-temp/_search_suggestion.php");
+                                        ?>
                                     </li>
+
                                     <li title="user">
                                         <?php 
                                             if(!isset($_SESSION['user_id'])){

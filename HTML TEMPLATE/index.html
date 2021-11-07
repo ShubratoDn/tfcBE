@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamai Food cart- Fastest fresh fast food restaurent</title>
+
+    <!-- FAVICON OF WEBSITE -->
+    <link rel="shortcut icon" href="resources/img/logo.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="vendor/css/normalize.css">
+    
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/css/bootstrap-grid.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+
+    <!-- Owl carousel  -->
+   <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="vendor/css/owl.theme.default.min.css">
+
+   <!-- DATA AOS -->
+   <link rel="stylesheet" href="vendor/css/aos.css">
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
+
+	
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader-div">
+        <div class="loader"></div>
+    </div>
+
+    <!-- go to top  -->
+    <button onclick="topFunction()" class="gotop">
+        <i class=" fa fa-angle-up"></i>
+    </button>
+    
+    <!-- header starts -->
+    <header>
+        <nav>
+            <!-- nav top bar -->
+            <div class="nav-top d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <!-- nav-top left -->
+                        <div class="col-10 nav-top-left">
+                            <a href="tel: +8801759458961" class="nav-top-call text-dark"> <i class="text-red fa fa-phone" ></i> &nbsp; +8801759458961</a> 
+                            <a href="mailto: mycomputer44985@gmail.com " class="nav-top-mail ml-sm-5 text-dark"> <i class="text-red fa fa-envelope" ></i> &nbsp; mycomputer44985@gmail.com</a>
+                        </div>
+                        <!-- nav-top Right -->
+                        <div class="col-2 nav-top-right">
+                            <div class="d-flex justify-content-around">
+                                <a href="#"><i class=" fa fa-facebook"></i></a>
+                                <a href="#"><i class=" fa fa-instagram"></i></a>
+                                <a href="#"><i class=" fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar">
+               <div class="container-fluid">
+                    <div class="row w-100">
+                        <!-- LOGO -->
+                        <div class="col-lg-1 d-flex align-items-center justify-content-center mb-4 mb-sm-0 logo-div">
+                              <!-- logo -->
+                            <a href="index.html">
+                                <img src="resources/img/logo.png" alt="TFC" title="Tamai Food Cart" id="logo">
+                            </a>  
+                        </div>
+                        <!-- NAV MENU -->
+                        <div class="col-lg-7  nav-menu-col">
+                            <!-- nav menus -->
+                            <div class="nav-menu">
+                                <ul>
+                                    <li><a href="index.html" data-after="Home">Home</a></li>
+                                    <li class=" dropdown">
+                                        <!-- dropdown menu -->
+                                        <a href="#" data-after="Menu" class=" dropdown-btn">Menu <i class=" fa fa-angle-down"></i>
+                                        </a>
+                                        <!-- dropdown items -->
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#" data-after="Menu">Fast Food</a></li>
+                                                <li><a href="#" data-after="Menu">Dupurer Khabar</a></li>
+                                                <li><a href="#" data-after="Menu">Breakfast</a></li>
+                                                <li><a href="#" data-after="Menu">Dinner</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>                                   
+                                    <li><a href="index.html#our-article" data-after="Articles">Articles</a></li>
+                                    <li><a href="about.html" data-after="About">About</a></li>
+                                    <li><a href="contact.html" data-after="Contact">Contact</a></li>
+                                </ul>
+
+                                <button class="nav-exit-btn"><i class=" fa fa-times"></i></button>
+                            </div>
+                        </div>
+                         <!-- NAV Extra -->
+                        <div class="col-lg-4 col-md-10 col-9 nav-extra-col">
+                            <div class="nav-extra">
+                                <!-- nav extra -->
+                                <ul>
+                                    <li>   
+                                        <form action="#" method="get" class="searchbar">
+                                            <!-- Search bar -->
+                                            <div class="search-group d-flex">
+                                                <input type="text" placeholder="Search food" class=" search-input">
+                                                <button type="submit" name="submit" class="fa fa-search search-btn">
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li title="user">
+                                        <button class="preventListener user" onclick="showModal()">
+                                            <i class=" fa fa-user"></i>                                            
+                                        </button>
+                                    </li>
+                                    <li title="cart">
+                                        <a href="#" class="cart">
+                                            <i class=" fa fa-shopping-basket"></i>
+                                            <div class="cart-number">2</div>
+                                        </a>
+                                    </li>
+                                    <li title="wishlist">
+                                        <a href="#" class="wishlist">
+                                            <i class=" fa fa-heart"></i>
+                                            <div class="wishlist-number">0</div>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- hamburger -->
+                        <div class="col-1 hamburger">
+                            <i class=" fa fa-bars"></i>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </nav>
+
+        <!--LOGIN modal box -->    
+        <div class="modal-box">
+            <!-- LOGIN FORM -->
+            <div class="login">
+                <form action="#" class="login-form">
+                    <h2 class=" text-center login-title">Login</h2>
+                    <input type="text" placeholder="Phone or Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" name="submit" value="Login" class=" login-submit">
+                    <p class=" text-muted">Don't have an account? <a href="#" class="text-red">Sign up</a></p> 
+                    <p><a href="#" class=" text-red">Forgot Password</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- modal box end -->
+        
+    </header>
+    <!-- header ends -->
+
+
+    <!--Main Starts  -->
+    <main>
+
+        <!--Landing page design starts   -->
+        <section id="land-page"> 
+            <div class="land-page">
+                <div class="owl-carousel owl-theme">
+                    <!--Item 1 -->
+                    <div class="item">                        
+                        <div class="land-item">                            
+                            <img src="resources/img/land-bg1.jpg" alt="" class="land-bg">
+
+                            <!-- land page overlay -->
+                            <div class="land-bg-overlay"></div>  
+
+                            <!-- Land Page text -->
+                            <div class="land-text">
+                                <div class="land-welcome">Welcome to Tamai Food Cart</div>
+                                <div class="land-title">
+                                    <h1>Get the Best and Fresh Fast Food and Delivery</h1>
+                                </div>
+                                <div class="land-info">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ab.
+                                </div>
+                                <a href="#"  class=" land-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                    <!--Item 2 -->
+                    <div class="item">                        
+                        <div class="land-item">                            
+                            <img src="resources/img/land-bg2.jpg" alt="" class="land-bg">
+
+                            <!-- land page overlay -->
+                            <div class="land-bg-overlay"></div>  
+
+                            <!-- Land Page text -->
+                            <div class="land-text">
+                                <div class="land-welcome">Welcome to Tamai Food Cart</div>
+                                <div class="land-title">
+                                    <h1>Get the Best and Fresh Fast Food and Delivery</h1>
+                                </div>
+                                <div class="land-info">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ab.
+                                </div>
+                                <a href="#"  class=" land-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div> 
+                                  
+
+
+                    <!--Item 3 -->
+                    <div class="item">                        
+                        <div class="land-item">                            
+                            <img src="resources/img/land-bg3.jpg" alt="" class="land-bg">
+
+                            <!-- land page overlay -->
+                            <div class="land-bg-overlay"></div>  
+
+                            <!-- Land Page text -->
+                            <div class="land-text">
+                                <div class="land-welcome">Welcome to Tamai Food Cart</div>
+                                <div class="land-title">
+                                    <h1>Get the Best and Fresh Fast Food and Delivery</h1>
+                                </div>
+                                <div class="land-info">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ab.
+                                </div>
+                                <a href="#"  class=" land-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div> 
+                                  
+                </div>
+            </div>            
+        </section>                   
+        <!--Landing page design starts   -->
+
+
+        <!-- CATAGORIES section starts  -->
+        <section id="catagories">
+            <div class="container-fluid">
+                <div class="all-catagories">
+                    <!-- Title -->
+                    <div class="title my-0 mx-auto">
+                       Our <span class="t-hl">Catagories</span>
+                    </div>
+
+                    <div class="owl-carousel owl-theme my-5">
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory1.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Pizza</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory2.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Burger</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory3.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Mutton Biriani</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory4.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Kacchi Biriani</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory4.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Kacchi Biriani</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- catagory -->
+                            <div class="catagory">
+                                <div class="catagory-img-div">
+                                    <img src="resources/img/catagory4.jpg" alt="catagory" class="catagory-img img-thumbnail ">
+                                </div>
+                                <div class="catagory-name">
+                                    <a href="https://google.com" class=" stretched-link">Kacchi Biriani</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CATAGORIES section Ends -->
+
+        <!-- FEATURE section starts -->
+        <section id="feature">
+            <div class="container-fluid">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <!-- feature box -->
+                        <div class="feature-box">
+                            <div class="feature-left">
+                                <!-- feature icon -->
+                                <i class=" fa fa-commenting-o feature-icon"></i>
+                            </div>
+                            <div class="feature-info">
+                                <!-- feature info -->
+                                <h5>99% customer</h5>
+                                <p>Feedbacks</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="item">
+                        <!-- feature box -->
+                        <div class="feature-box">
+                            <div class="feature-left">
+                                <!-- feature icon -->
+                                <i class=" fa fa-rocket feature-icon"></i>
+                            </div>
+                            <div class="feature-info">
+                                <!-- feature info -->
+                                <h5>Cheap delivery cost </h5>
+                                <p>Whole Country 50tk</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="item">
+                        <!-- feature box -->
+                        <div class="feature-box">
+                            <div class="feature-left">
+                                <!-- feature icon -->
+                                <i class=" fa fa-shield feature-icon"></i>
+                            </div>
+                            <div class="feature-info">
+                                <!-- feature info -->
+                                <h5>secure paymnet </h5>
+                                <p>100% secure payment</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="item">
+                        <!-- feature box -->
+                        <div class="feature-box">
+                            <div class="feature-left">
+                                <!-- feature icon -->
+                                <i class="fa fa-circle-o-notch   feature-icon" aria-hidden="true"></i>
+                                
+                            </div>
+                            <div class="feature-info">
+                                <!-- feature info -->
+                                <h5>return payment </h5>
+                                <p>payment return on defect</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="item">
+                        <!-- feature box -->
+                        <div class="feature-box">
+                            <div class="feature-left">
+                                <!-- feature icon -->
+                                <i class="fa fa-headphones  feature-icon" aria-hidden="true"></i>
+                                
+                            </div>
+                            <div class="feature-info">
+                                <!-- feature info -->
+                                <h5>24/7 support</h5>
+                                <p>Dedicated support</p>
+                            </div>
+                        </div>                        
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- FEATURE section Ends -->
+
+
+        <!-- deal / recommendation  -->
+        <section id="deal-recommend">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-5">
+                        <!-- DEAL FOR TODAY SECTION -->
+                        <section id="deal-today" class="m-5 m-md-0">
+                            <!-- Title -->
+                            <div class="title font-16 m-0">
+                                Deals for <span class="t-hl">Today</span>
+                            </div>
+                            <hr>
+                            <div class="owl-carousel owl-theme">
+                                <!-- deal item -->
+                                <div class="item">
+                                    <div class="deal-item">
+                                        <div class="deal-img-section">
+                                            <!-- image -->
+                                            <img src="resources/img/catagory1.jpg" alt="" class="deal-img">
+                                        </div>
+    
+                                        <div class="deal-info">
+                                            <p class="deal-catagory text-muted my-3">Pizza</p>
+                                            <p class=" deal-item-name my-2">Cheeze Pizza with Extra Cheeze</p>
+    
+                                            <div class="rating">
+                                                <!-- deal rating -->
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star-o"></i>
+                                            </div>
+                                            <!-- product price -->
+                                            <div class="price">
+                                                <div class="del-price">৳480</div>
+                                                <div class="c-price">৳380</div>
+                                            </div>  
+                                            <!-- Expire deal  -->
+                                            <div class="expired-deal">
+                                                <p class="font-12 text-muted m-4">Expires in</p>
+                                                <!-- count down -->
+                                                <div class=" count-down">
+                                                    <div class="cd">
+                                                        <span class="cd-day">00</span>
+                                                        <p>Days</p>
+                                                    </div>                                                
+                                                    <div class="cd">
+                                                        <span class="cd-hour">00</span>
+                                                        <p>Hour</p>
+                                                    </div>                                            
+                                                    <div class="cd">
+                                                        <span class="cd-min">00</span>
+                                                        <p>Min</p>
+                                                    </div>                                            
+                                                    <div class="cd">
+                                                        <span class="cd-sec">00</span>
+                                                        <p>Sec</p>
+                                                    </div>                                
+                                                </div> 
+                                            </div>                   
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="deal-item">
+                                        <div class="deal-img-section">
+                                            <!-- image -->
+                                            <img src="resources/img/catagory1.jpg" alt="" class="deal-img">
+                                        </div>
+    
+                                        <div class="deal-info">
+                                            <p class="deal-catagory text-muted my-3">Pizza</p>
+                                            <p class=" deal-item-name my-2">Cheeze Pizza with Extra Cheeze</p>
+    
+                                            <div class="rating">
+                                                <!-- deal rating -->
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star"></i>
+                                                <i class=" fa fa-star-o"></i>
+                                            </div>
+                                            <!-- product price -->
+                                            <div class="price">
+                                                <div class="del-price">৳480</div>
+                                                <div class="c-price">৳380</div>
+                                            </div>  
+                                            <!-- Expire deal  -->
+                                            <div class="expired-deal">
+                                                <p class="font-12 text-muted m-4">Expires in</p>
+                                                <!-- count down -->
+                                                <div class=" count-down">
+                                                    <div class="cd">
+                                                        <span class="cd-day">00</span>
+                                                        <p>Days</p>
+                                                    </div>                                                
+                                                    <div class="cd">
+                                                        <span class="cd-hour">00</span>
+                                                        <p>Hour</p>
+                                                    </div>                                            
+                                                    <div class="cd">
+                                                        <span class="cd-min">00</span>
+                                                        <p>Min</p>
+                                                    </div>                                            
+                                                    <div class="cd">
+                                                        <span class="cd-sec">00</span>
+                                                        <p>Sec</p>
+                                                    </div>                                
+                                                </div> 
+                                            </div>                   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                        </section>
+                        <!-- DEAL FOR TODAY SECTION ENDS -->
+                    </div>
+                    <div class="col-lg-9 col-md-7">
+                        <!-- recommend for you -->
+                        <section id="recommend-item-section" class="m-5 m-md-0">
+                            <div class="title font-16 m-0">
+                                Recommendation for You
+                            </div>
+                            <hr>
+                            <div class="owl-carousel owl-theme">
+
+                                <div class="item">                                    
+                                    <!-- food item card -->
+                                    <div class="food-item">
+                                        <div class="item-img-div">
+                                            <img src="resources/img/catagory1.jpg" alt="" class="item-img">
+                                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-name">
+                                               Chessey pizza
+                                            </div>
+                                            <div class="item-pri-cat">
+                                                <div class="item-catagory">pizza</div>
+                                                <!-- item price -->
+                                                <div class="price">
+                                                    <div class="del-price">৳480</div>
+                                                    <div class="c-price">৳380</div>
+                                                </div> 
+                                            </div>
+                                        </div>        
+
+                                        <div class="item-card-footer">                                            
+                                            <div class="item-rate">                                                
+                                                <div class="rating">
+                                                    <!-- deal rating -->
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star-o"></i>
+                                                </div>
+                                                <div class="item-review">2144 Reviews</div>
+                                            </div>                                                                                                       
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="item">                                    
+                                    <!-- food item card -->
+                                    <div class="food-item">
+                                        <div class="item-img-div">
+                                            <img src="resources/img/catagory2.jpg" alt="" class="item-img">
+                                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-name">
+                                               Veg burger
+                                            </div>
+                                            <div class="item-pri-cat">
+                                                <div class="item-catagory">Burger</div>
+                                                <!-- item price -->
+                                                <div class="price">
+                                                    <div class="del-price">৳200</div>
+                                                    <div class="c-price">৳150</div>
+                                                </div> 
+                                            </div>
+                                        </div>        
+
+                                        <div class="item-card-footer">                                            
+                                            <div class="item-rate">                                                
+                                                <div class="rating">
+                                                    <!-- deal rating -->
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star-o"></i>
+                                                </div>
+                                                <div class="item-review">2144 Reviews</div>
+                                            </div>                                                                                                       
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="item">                                    
+                                    <!-- food item card -->
+                                    <div class="food-item">
+                                        <div class="item-img-div">
+                                            <img src="resources/img/catagory3.jpg" alt="" class="item-img">
+                                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-name">
+                                               Kacchi Biriani
+                                            </div>
+                                            <div class="item-pri-cat">
+                                                <div class="item-catagory">Biriani</div>
+                                                <!-- item price -->
+                                                <div class="price">
+                                                    <div class="del-price">৳100</div>
+                                                    <div class="c-price">৳150</div>
+                                                </div> 
+                                            </div>
+                                        </div>        
+
+                                        <div class="item-card-footer">                                            
+                                            <div class="item-rate">                                                
+                                                <div class="rating">
+                                                    <!-- deal rating -->
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star-o"></i>
+                                                </div>
+                                                <div class="item-review">2144 Reviews</div>
+                                            </div>                                                                                                       
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="item">                                    
+                                    <!-- food item card -->
+                                    <div class="food-item">
+                                        <div class="item-img-div">
+                                            <img src="resources/img/catagory2.jpg" alt="" class="item-img">
+                                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-name">
+                                               Veg burger
+                                            </div>
+                                            <div class="item-pri-cat">
+                                                <div class="item-catagory">Burger</div>
+                                                <!-- item price -->
+                                                <div class="price">
+                                                    <div class="del-price">৳200</div>
+                                                    <div class="c-price">৳150</div>
+                                                </div> 
+                                            </div>
+                                        </div>        
+
+                                        <div class="item-card-footer">                                            
+                                            <div class="item-rate">                                                
+                                                <div class="rating">
+                                                    <!-- deal rating -->
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star-o"></i>
+                                                </div>
+                                                <div class="item-review">2144 Reviews</div>
+                                            </div>                                                                                                       
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                
+                                <div class="item">                                    
+                                    <!-- food item card -->
+                                    <div class="food-item">
+                                        <div class="item-img-div">
+                                            <img src="resources/img/catagory1.jpg" alt="" class="item-img">
+                                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-name">
+                                               Chessey pizza
+                                            </div>
+                                            <div class="item-pri-cat">
+                                                <div class="item-catagory">pizza</div>
+                                                <!-- item price -->
+                                                <div class="price">
+                                                    <div class="del-price">৳480</div>
+                                                    <div class="c-price">৳380</div>
+                                                </div> 
+                                            </div>
+                                        </div>        
+
+                                        <div class="item-card-footer">                                            
+                                            <div class="item-rate">                                                
+                                                <div class="rating">
+                                                    <!-- deal rating -->
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star"></i>
+                                                    <i class=" fa fa-star-o"></i>
+                                                </div>
+                                                <div class="item-review">2144 Reviews</div>
+                                            </div>                                                                                                       
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                
+                            </div>
+                        </section>
+
+                        <!-- ad section starts  -->
+                        <section id="ad">
+                            <div class="row">
+                                <!-- ad 1  -->
+                                <div class="col-12 col-lg-6">
+                                    <a href="https://google.com">
+                                        <div class="ad">
+                                            <img src="resources/img/ad1.png" alt="ad" class="ad-img">
+                                        </div>
+                                    </a>                                      
+                                </div>
+                                <!-- ad 2  -->
+                                <div class="col-12 col-lg-6">
+                                    <a href="https://google.com">
+                                        <div class="ad">
+                                            <img src="resources/img/ad2.png" alt="ad" class="ad-img">
+                                        </div>
+                                    </a>                                      
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ad section Ends -->
+                    </div>
+
+                </div> 
+            </div>
+        </section>
+
+        <!-- TRENDS ITEM SECTION STARTS -->
+        <section id="trend-items">
+            <div class="container-fluid">
+                <div class="title">
+                    Trending <span class="t-hl">Items</span>
+                </div>
+                <hr class=" mb-5">
+                
+                <div class="trend-items item-container">
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food2.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                WAFFLE FRIES CHICK-FIL-A
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Fries</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳120</div>
+                                    <div class="c-price">৳80</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food1.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                veg buger
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳100</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food3.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN POPEYES
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳200</div>
+                                    <div class="c-price">৳180</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food4.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN SANDWICH
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Sandwich</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳180</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food5.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                BACON CHEESEBURGER
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">burger</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳280</div>
+                                    <div class="c-price">৳250</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food6.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Kacchi Biriani
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳170</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food2.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                WAFFLE FRIES CHICK-FIL-A
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Fries</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳120</div>
+                                    <div class="c-price">৳80</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food1.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                veg buger
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳100</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food3.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN POPEYES
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳200</div>
+                                    <div class="c-price">৳180</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food4.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN SANDWICH
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Sandwich</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳180</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food5.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                BACON CHEESEBURGER
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">burger</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳280</div>
+                                    <div class="c-price">৳250</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food6.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Kacchi Biriani
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳170</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+
+                </div>                
+
+                <!-- see more btn -->
+                <div class="see-more">
+                    <a href="https://www.google.com" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- TRENDS ITEM SECTION ENDS -->
+
+        <!-- double ad section starts  -->
+        <section id="ad">
+            <div class="row container-fluid">
+                <!-- ad 3  -->
+                <div class="col-12 col-lg-6">
+                    <a href="#">
+                        <div class="ad">
+                            <img src="resources/img/ad3.jpg" alt="ad" class="ad-img">
+                        </div>
+                    </a>                                      
+                </div>
+                <!-- ad 4  -->
+                <div class="col-12 col-lg-6">
+                    <a href="#">
+                        <div class="ad">
+                            <img src="resources/img/ad4.jpg" alt="ad" class="ad-img">
+                        </div>
+                    </a>                                      
+                </div>
+            </div>
+        </section>
+        <!-- ad section Ends -->
+
+
+        <!-- Desert Item SECTION STARTS -->
+        <section id="desert">
+            <div class="container-fluid">
+                <div class="title">
+                    our <span class="t-hl">deserts</span>
+                </div>
+                <hr class=" mb-5">
+                
+                <div class="deserts item-container">
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food7.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Apple pie
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳300</div>
+                                    <div class="c-price">৳280</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food8.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Almond Malai Kulfi
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳150</div>
+                                    <div class="c-price">৳120</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food9.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Coconut Kheer
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳150</div>
+                                    <div class="c-price">৳120</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food10.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Chocolate Coffee Truffle
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳280</div>
+                                    <div class="c-price">৳250</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food11.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                               Vanilla ice cream
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳80</div>
+                                    <div class="c-price">৳75</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food12.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                               RoshoGolla
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">desert</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳260</div>
+                                    <div class="c-price">৳250</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+      
+                </div>                
+
+                <!-- see more btn -->
+                <div class="see-more">
+                    <a href="https://www.google.com" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Desert Item SECTION ENDS -->
+
+        <!-- Lunch Special SECTION STARTS -->
+        <section id="lunch">
+            <div class="container-fluid">
+                <div class="title">
+                    Lunch <span class="t-hl">Items</span>
+                </div>
+                <hr class=" mb-5">
+                
+                <div class="lunch item-container">
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food6.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                Kacchi Biriani
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳170</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food2.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                WAFFLE FRIES CHICK-FIL-A
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Fries</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳120</div>
+                                    <div class="c-price">৳80</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food1.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                veg buger
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳100</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food3.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN POPEYES
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Biriani</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳200</div>
+                                    <div class="c-price">৳180</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food4.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                CHICKEN SANDWICH
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">Sandwich</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳180</div>
+                                    <div class="c-price">৳150</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                    
+                    <!-- food item card -->
+                    <div class="food-item">
+                        <div class="item-img-div">
+                            <img src="resources/img/food5.jpg" alt="" class="item-img">
+                            <a href="#" class="item-detail-link"><i class=" fa fa-search"></i></a>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">
+                                BACON CHEESEBURGER
+                            </div>
+                            <div class="item-pri-cat">
+                                <div class="item-catagory">burger</div>
+                                <!-- item price -->
+                                <div class="price">
+                                    <div class="del-price">৳280</div>
+                                    <div class="c-price">৳250</div>
+                                </div> 
+                            </div>
+                        </div>        
+
+                        <div class="item-card-footer">                                            
+                            <div class="item-rate">                                                
+                                <div class="rating">
+                                    <!-- deal rating -->
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star"></i>
+                                    <i class=" fa fa-star-o"></i>
+                                </div>
+                                <div class="item-review">2144 Reviews</div>
+                            </div>                                                                                                       
+                        </div>
+                    </div>
+                </div>                
+
+                <!-- see more btn -->
+                <div class="see-more">
+                    <a href="https://www.google.com" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Lunch special SECTION ENDS -->
+
+
+        <!-- Single ad section starts  -->
+        <section id="ad" >
+            <div class="row container-fluid">
+                <!-- ad 5  -->
+                <div class="col-12">
+                    <a href="#">
+                        <div class="ad single-ad">
+                            <img src="resources/img/ad5.jpg" alt="ad" class="ad-img">
+                        </div>
+                    </a>                                      
+                </div>
+            </div>
+        </section>
+        <!-- ad section Ends -->
+
+
+        <!-- Know more -->
+        <section id="know-more">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="know-left col-12 col-md-6">
+                        <!-- explore info -->
+                        <div class="know-info">
+                            <h1>Know who we are!</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati porro quaerat a molestiae excepturi, laborum dolorum reiciendis vel quae dolorem odio aperiam?</p>
+                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nihil accusamus in sint officiis. Dolores! consectetur adipisicing elit. Obcaecati porro quaerat a molestiae excepturi, laborum dolorum reiciendis vel quae dolorem odio aperiam?</p>
+                            <div class="know-bottom">
+                                <a href="#" class="def-btn">Learn More</a>
+                                <a href="tel:+8801759458961" class="know-phone"><i class=" fa fa-phone"></i> +8801759458961</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="know-right col-12 col-md-6 text-center">
+                        <img src="resources/img/know.jpg" alt="" class=" img-fluid know-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Know more --> 
+
+
+        <!-- our article sections starts -->
+        <section id="our-article">
+            <div class="container-fluid">
+
+                <div class="title">
+                    Our Recent <span class="t-hl">News</span> &  <span class="t-hl">Articles</span>
+                </div>
+
+                <div class="owl-carousel owl-theme">
+
+                    <div class="item">
+                        <!-- article card starts -->
+                        <div class="article ">
+                            <img src="resources/img/article1.jpg" alt="" class="article-img">
+                            <div class="article-body">
+                                <div class="article-shorts">
+                                    <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                                    <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                                </div>
+                                <h2 class="article-title">Deliver Boy</h2>
+                                <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                            </div>
+                            <a href="#" class="article-more"><i class=" fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- article card Ends -->
+                    </div>
+
+                    <div class="item">
+                        <!-- article card starts -->
+                        <div class="article ">
+                            <img src="resources/img/article2.jpg" alt="" class="article-img">
+                            <div class="article-body">
+                                <div class="article-shorts">
+                                    <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                                    <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                                </div>
+                                <h2 class="article-title">Healthy Cooking</h2>
+                                <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                            </div>
+                            <a href="#" class="article-more"><i class=" fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- article card Ends -->
+                    </div>
+
+                    <div class="item">
+                        <!-- article card starts -->
+                        <div class="article ">
+                            <img src="resources/img/article3.jpg" alt="" class="article-img">
+                            <div class="article-body">
+                                <div class="article-shorts">
+                                    <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                                    <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                                </div>
+                                <h2 class="article-title">All in  One</h2>
+                                <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                            </div>
+                            <a href="#" class="article-more"><i class=" fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- article card Ends -->
+                    </div>
+
+                    <div class="item">
+                        <!-- article card starts -->
+                        <div class="article ">
+                            <img src="resources/img/article4.jpg" alt="" class="article-img">
+                            <div class="article-body">
+                                <div class="article-shorts">
+                                    <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                                    <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                                </div>
+                                <h2 class="article-title">Expert Chef</h2>
+                                <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                            </div>
+                            <a href="#" class="article-more"><i class=" fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- article card Ends -->
+                    </div>
+             
+                </div>
+                <!-- see more btn -->
+                <div class="see-more">
+                    <a href="article.html" class="see-more-btn">See More <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- our article sections Ends -->
+
+        <hr class=" mb-3">
+        <!-- news letter section starts -->
+        <section id="news-letter">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-lg-5 col-md-12 nl-text d-flex justify-content-center align-items-center">
+                        <i class="fa fa-paper-plane"></i>
+                        <div class=" text-left">
+                            <h1>Subscribe for Newsletter</h1>
+                            <p>We will never shere your email address with third-party.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-9">
+                        <form action="#" class=" d-flex justify-content-center align-items-center">
+                            <input type="email" name="" id="" placeholder="Enter your email address">
+                            <input type="submit" value="Subscribe" class="">
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-md-3 nl-links">
+                        <a href="#"><i class=" fa fa-facebook"></i></a>
+                        <a href="#"><i class=" fa fa-twitter"></i></a>
+                        <a href="#"><i class=" fa fa-instagram"></i></a>
+                        <a href="#"><i class=" fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- news letter section Ends -->
+
+    </main>
+    <!--Main Ends  -->  
+   
+
+    <!-- footer starts -->
+    <footer id="footer"> 
+        <div class="footer-body">
+            <div class="container-fluid py-5">
+                <div class="row pt-5">
+                    <!-- contact us -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4 foot-contact">
+                        <h1>CONTACT US</h1>
+                        <p><i class=" fa fa-map-marker pr-3"></i><b>Headquerter : </b> <a href="#">Belkuchi, Sirajganj</a></p>
+                        <p><i class=" fa fa-envelope pr-2"></i><b>Email : </b><a href="mailto: mycomputer44985@gmail.com" >mycomputer44985@gmail.com</a></p>
+                        <p><i class=" fa fa-phone pr-3"></i><b>Tel : </b><a href="tel: 01759458961" >01759458961</a></p>
+                    </div>
+                    <!-- services -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Customer Services</h1>
+                        <p><a href="#">Privacy Policy</a></p>
+                        <p><a href="#">Cookie Policy</a></p>
+                        <p><a href="#">Purchasing Policy</a></p>
+                        <p><a href="#">Terms & Conditions</a></p>
+                    </div>
+                    <!-- additional links -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Information</h1>
+                        <p><a href="#">About us</a></p>
+                        <p><a href="#">Contact us</a></p>
+                    </div>
+                    <!-- Get In TOuch -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Get in Touch</h1>
+                        <p class="social-links">
+                            <a href="#"><i class=" fa fa-facebook"></i></a>
+                            <a href="#"><i class=" fa fa-twitter"></i></a>
+                            <a href="#"><i class=" fa  fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-end py-4">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center align-items-center">                        
+                        &copy; 2021 All Rights Reserved <span class=" text-red"> || </span> Design & Developed by <span class="text-white" style=" cursor:pointer"> &nbsp;Shubrato Debnath</span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer Ends -->
+
+        
+        
+
+
+<!-- ================javascript links=================== -->
+    <!-- vendor js -->
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/popper.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="vendor/js/bootstrap.min.js"></script>
+    
+    <script src="vendor/js/html5shiv.min.js"></script>
+    <script src="vendor/js/respond.min.js"></script>
+
+
+    <!-- owl carousel -->
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <!-- DATA AOS -->
+    <script src="vendor/js/aos.js"></script>
+
+    <!-- custom js -->
+    <script src="resources/js/main.js"></script>
+
+
+
+</body>
+</html>

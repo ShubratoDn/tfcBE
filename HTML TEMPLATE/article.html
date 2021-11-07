@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamai Food cart- Fastest fresh fast food restaurent</title>
+
+    <!-- FAVICON OF WEBSITE -->
+    <link rel="shortcut icon" href="resources/img/logo.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="vendor/css/normalize.css">
+    
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/css/bootstrap-grid.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+
+    <!-- Owl carousel  -->
+   <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="vendor/css/owl.theme.default.min.css">
+
+   <!-- DATA AOS -->
+   <link rel="stylesheet" href="vendor/css/aos.css">
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
+</head>
+<body>
+    
+    <!-- header starts -->
+    <header>
+        <nav>
+            <!-- nav top bar -->
+            <div class="nav-top d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <!-- nav-top left -->
+                        <div class="col-10 nav-top-left">
+                            <a href="tel: +8801759458961" class="nav-top-call text-dark"> <i class="text-red fa fa-phone" ></i> &nbsp; +8801759458961</a> 
+                            <a href="mailto: mycomputer44985@gmail.com " class="nav-top-mail ml-sm-5 text-dark"> <i class="text-red fa fa-envelope" ></i> &nbsp; mycomputer44985@gmail.com</a>
+                        </div>
+                        <!-- nav-top Right -->
+                        <div class="col-2 nav-top-right">
+                            <div class="d-flex justify-content-around">
+                                <a href="#"><i class=" fa fa-facebook"></i></a>
+                                <a href="#"><i class=" fa fa-instagram"></i></a>
+                                <a href="#"><i class=" fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar">
+               <div class="container-fluid">
+                    <div class="row w-100">
+                        <div class="col-sm-1 d-flex align-items-center justify-content-center mb-4 mb-sm-0 logo-div">
+                              <!-- logo -->
+                              <a href="index.html">
+                                <img src="resources/img/logo.png" alt="TFC" title="Tamai Food Cart" id="logo">
+                             </a>  
+                        </div>
+                        <div class="col-lg-7 nav-menu-col">
+                            <!-- nav menus -->
+                            <div class="nav-menu">
+                                <ul>
+                                    <li><a href="#" data-after="Home">Home</a></li>
+                                    <li class=" dropdown">
+                                        <!-- dropdown menu -->
+                                        <a href="#" data-after="Menu" class=" dropdown-btn">Menu <i class=" fa fa-angle-down"></i>
+                                        </a>
+                                        <!-- dropdown items -->
+                                        <div class="dropdown-items">
+                                            <ul>
+                                                <li><a href="#" data-after="Menu">Fast Food</a></li>
+                                                <li><a href="#" data-after="Menu">Dupurer Khabar</a></li>
+                                                <li><a href="#" data-after="Menu">Breakfast</a></li>
+                                                <li><a href="#" data-after="Menu">Dinner</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>                                   
+                                    <li><a href="index.html#our-article" data-after="Articles">Articles</a></li>
+                                    <li><a href="#" data-after="About">About</a></li>
+                                    <li><a href="#" data-after="Contact">Contact</a></li>
+                                </ul>
+
+                                <button class="nav-exit-btn"><i class=" fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-10 col-9 nav-extra-col">
+                            <div class="nav-extra">
+                                <!-- nav extra -->
+                                <ul>
+                                    <li>   
+                                        <form action="#" method="get" class="searchbar">
+                                            <!-- Search bar -->
+                                            <div class="search-group d-flex">
+                                                <input type="text" placeholder="Search food" class=" search-input">
+                                                <button type="submit" name="submit" class="fa fa-search search-btn">
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li title="user">
+                                        <button class="preventListener user" onclick="showModal()">
+                                            <i class=" fa fa-user"></i>                                            
+                                        </button>
+                                    </li>
+                                    <li title="cart">
+                                        <a href="#" class="cart">
+                                            <i class=" fa fa-shopping-basket"></i>
+                                            <div class="cart-number">2</div>
+                                        </a>
+                                    </li>
+                                    <li title="wishlist">
+                                        <a href="#" class="wishlist">
+                                            <i class=" fa fa-heart"></i>
+                                            <div class="wishlist-number">0</div>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 hamburger">
+                            <i class=" fa fa-bars"></i>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </nav>
+
+        <!--LOGIN modal box -->    
+        <div class="modal-box">
+            <!-- LOGIN FORM -->
+            <div class="login">
+                <form action="#" class="login-form">
+                    <h2 class=" text-center login-title">Login</h2>
+                    <input type="text" placeholder="Phone or Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" name="submit" value="Login" class=" login-submit">
+                    <p class=" text-muted">Don't have an account? <a href="#" class="text-red">Sign up</a></p> 
+                    <p><a href="#" class=" text-red">Forgot Password</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- modal box end -->
+        
+    </header>
+    <!-- header ends -->
+
+    <main>        
+
+        <!-- page banner starts -->
+        <div class="page-banner article-banner">
+            <h1 class="banner-text">OUR ARTICLES</h1>
+        </div>
+        <!-- page banner Ends -->
+
+
+        <!-- all articles section starts  -->
+        <div id="all-articles">
+            <!-- article card starts -->
+            <div class="article">
+                <img src="resources/img/article1.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Deliver Boy</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article2.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Healthy Cooking</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+                
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article3.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">All in  One</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- article card starts -->
+            <div class="article">
+                <img src="resources/img/article1.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Deliver Boy</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article2.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Healthy Cooking</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+                
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article3.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">All in  One</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- article card starts -->
+            <div class="article">
+                <img src="resources/img/article1.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Deliver Boy</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article2.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">Healthy Cooking</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+                
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- article card starts -->
+            <div class="article ">
+                <img src="resources/img/article3.jpg" alt="" class="article-img">
+                <div class="article-body">
+                    <div class="article-shorts">
+                        <div class="article-author"><i class="fa fa-user"></i> Shubrato Debnath</div>
+                        <div class="article-date"><i class="fa fa-calendar"></i> 20 Jun 2021 </div>
+                    </div>
+                    <h2 class="article-title">All in  One</h2>
+                    <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur ratione consequatur commodi, necessitatibus odio nesciunt.</p>
+                </div>
+                <button onclick="showArtModal()" class="article-more"><i class=" fa fa-angle-right"></i></button>
+
+                <!-- articel modal -->
+                <div class="article-modal">
+                    <i class=" fa fa-times text-white fa-2x article-exit"></i>
+                    <div class="full-article">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, explicabo accusantium! Nisi vitae, illo, quibusdam sed, iure architecto accusantium incidunt aut consequuntur dolore voluptates! Aut excepturi sapiente nostrum ducimus doloribus provident. Obcaecati deserunt, incidunt sint porro minus earum aperiam ad alias reprehenderit culpa ut, unde voluptas tempore quibusdam neque et maiores ex? Eius aspernatur laborum porro sit obcaecati soluta laudantium. Esse veniam saepe inventore delectus! Blanditiis ex molestiae tempora expedita?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi asperiores totam explicabo quam nobis in harum, hic ut repellat beatae id amet similique alias assumenda, maiores consequuntur modi deserunt facilis recusandae. Ducimus suscipit consequatur quas obcaecati quis aliquam asperiores voluptatem labore quia rem? Sed quia earum numquam amet! Saepe voluptatum harum ab? Ipsam incidunt cumque odit at totam sint dolorem ab, ducimus fuga soluta expedita numquam aut placeat minus. Quisquam quia voluptatem, deleniti alias aliquam reiciendis sed! Sed tempore voluptate nemo nulla praesentium accusantium, amet, culpa maiores nisi sunt voluptates est atque dicta. Sapiente voluptas sequi corporis laboriosam dignissimos doloribus dicta debitis, in reiciendis quos, quidem natus tempore repellat possimus omnis aspernatur consectetur aperiam voluptates commodi optio suscipit cupiditate. Fuga beatae enim dolor saepe, esse sint autem quod tempore, magnam error a illum veritatis, fugiat maiores voluptas neque. Quasi, laborum deserunt aut accusantium sapiente nam vel dignissimos possimus ipsa quae laudantium veritatis sint corporis optio nostrum voluptatibus ut amet. Asperiores quae vitae eius mollitia voluptate facere porro reiciendis earum ut, fuga magni inventore suscipit at eligendi. Incidunt ab possimus quae molestiae distinctio odio explicabo cumque beatae, eveniet fugiat iure sequi nam aperiam nihil alias tempora! Accusamus sequi tempore impedit!</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- all articles section starts  -->
+    </main>
+
+    
+    <!-- footer starts -->
+    <footer id="footer"> 
+        <div class="footer-body">
+            <div class="container-fluid py-5">
+                <div class="row pt-5">
+                    <!-- contact us -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4 foot-contact">
+                        <h1>CONTACT US</h1>
+                        <p><i class=" fa fa-map-marker pr-3"></i><b>Headquerter : </b> <a href="#">Belkuchi, Sirajganj</a></p>
+                        <p><i class=" fa fa-envelope pr-2"></i><b>Email : </b><a href="mailto: mycomputer44985@gmail.com" >mycomputer44985@gmail.com</a></p>
+                        <p><i class=" fa fa-phone pr-3"></i><b>Tel : </b><a href="tel: 01759458961" >01759458961</a></p>
+                    </div>
+                    <!-- services -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Customer Services</h1>
+                        <p><a href="#">Privacy Policy</a></p>
+                        <p><a href="#">Cookie Policy</a></p>
+                        <p><a href="#">Purchasing Policy</a></p>
+                        <p><a href="#">Terms & Conditions</a></p>
+                    </div>
+                    <!-- additional links -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Information</h1>
+                        <p><a href="#">About us</a></p>
+                        <p><a href="#">Contact us</a></p>
+                    </div>
+                    <!-- Get In TOuch -->
+                    <div class="col-md-3 col-sm-6 col-12 p-3 mb-4">
+                        <h1>Get in Touch</h1>
+                        <p class="social-links">
+                            <a href="#"><i class=" fa fa-facebook"></i></a>
+                            <a href="#"><i class=" fa fa-twitter"></i></a>
+                            <a href="#"><i class=" fa  fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-end py-4">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center align-items-center">                        
+                        &copy; 2021 All Rights Reserved <span class=" text-red"> || </span> Design & Developed by <span class="text-white" style=" cursor:pointer"> &nbsp;Shubrato Debnath</span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer Ends -->
+
+        
+        
+
+
+<!-- ================javascript links=================== -->
+    <!-- vendor js -->
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/popper.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="vendor/js/bootstrap.min.js"></script>
+    
+    <script src="vendor/js/html5shiv.min.js"></script>
+    <script src="vendor/js/respond.min.js"></script>
+
+
+    <!-- owl carousel -->
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <!-- DATA AOS -->
+    <script src="vendor/js/aos.js"></script>
+
+    <!-- custom js -->
+    <script src="resources/js/main.js"></script>
+
+
+    <!-- custom script -->
+    <script>
+
+        /* ====================================== */
+        /*  Article modal  */
+        /* ====================================== */
+        // SHOW/HIDE LOGIN MODAL
+        var articleModal = document.querySelector(".article-modal");
+        var articleExit = document.querySelector(".article-exit");
+
+        articleExit.addEventListener("click",function(){
+            articleModal.style.display = "none";
+        });
+
+        function  showArtModal(){
+            articleModal.style.display = "flex";    
+        }
+
+        window.onclick = function(event){
+            if(event.target == articleModal) {
+                articleModal.style.display = "none";
+            }
+        }
+        // SHOW/HIDE MODAL
+
+    </script>
+
+
+
+</body>
+</html>
