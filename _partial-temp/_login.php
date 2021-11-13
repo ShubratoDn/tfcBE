@@ -5,9 +5,9 @@
     // LOGIN INFORMATION
     @$email = $_POST["email"];
     @$password = $_POST["password"];
+    $error = NULL;
 
     if(isset($_POST["submit"])){
-        
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $password = filter_var($password, FILTER_SANITIZE_STRING);
@@ -63,7 +63,6 @@
             }
         }
 
-
     }
     
 ?> 
@@ -97,3 +96,17 @@
     </div>
 </div>
 <!-- modal box end -->
+
+
+<?php
+
+    if($error){
+        ?>
+            <script>
+                var modal = document.querySelector(".modal-box");
+                modal.style.display = "flex";
+            </script>
+        <?php
+    }
+
+?>
