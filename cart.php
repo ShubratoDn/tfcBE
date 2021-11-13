@@ -66,9 +66,9 @@
                     endforeach;
                 }
 
-                if($itemCount <= 0 ){
-                    echo"Item  Not Found";
-               }else{ //IF FILE NOT FOUND SHOW THIS
+                if($itemCount <= 0 ){//IF FILE NOT FOUND SHOW THIS
+                    echo"<h1 class='text-red mt-5 pt-5 text-center fa-3x'>Your cart is Empty</h1>";
+               }else{ 
             ?>
                 <div class="row">
                     <!-- cart-info -->

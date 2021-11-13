@@ -5,7 +5,8 @@
     if(!isset($food_id)){
         ?>
             <script>
-                location.replace("<?php echo "index.php"?>");
+                // location.replace("<?php
+                // echo "index.php"?>");
             </script>
         <?php 
     }
@@ -73,13 +74,7 @@
                     </script>
                 <?php
             }
-
-            
-            
         }
-
-
-    
     ?>
     <!-- =========================== -->
             <!-- ADD TO CART ENDS-->
@@ -117,6 +112,7 @@
 
             $rating = $row["item_rating"];
     ?>
+
         <!-- item info section starts -->
         <section id="product-page">
             <div class="container-fluid">
@@ -143,7 +139,7 @@
                                         <?php include($adRedirect."_partial-temp/_item-rating.php")?>
                                     </div>
                                     <div class="fdback">
-                                        &nbsp; || <a href="#">  <?php echo $row["item_t_review"]?> FeedBack for this item</a>
+                                        &nbsp; || <a href="#product_more" onclick="showFdb()">  <?php echo $row["item_t_review"]?> FeedBack for this item</a>
                                     </div>
                                 </div>
                                 <p>
@@ -195,7 +191,7 @@
                                             if(isset($_SESSION['myCart'])){
                                                 foreach($_SESSION['myCart'] as $key => $item){
                                                     if($food_id == $item['cid']){
-                                                        echo '<a href="cart.php" class="add-cart-btn text-decoration-none text-white" style="padding-top:8px;padding-bottom:8px">View Cart</a>';
+                                                        echo '<a href="cart.php" class="add-cart-btn bg-success text-decoration-none text-white" style="padding-top:8px;padding-bottom:8px">View Cart</a>';
                                                         $showCartBtn = false;
                                                     }
                                                 }
@@ -234,30 +230,25 @@
                     </div>
                 </div>
 
-                <?php 
-                    // unset($_SESSION['myCart']);
-                    if(isset($_SESSION["myCart"])){
-                        // foreach($_SESSION["myCart"] as $item){
-                        //     echo  $item['cid'] ."<br>";
-                        //     echo  $item['cname'] ."<br>";
-                        //     echo  $item['cqty'] ."<br>";
-                        //     echo  "<hr>";
-                        // }
-                        // print_r($_SESSION['myCart']);
-                    }
-                ?>
+
+
+
+
+
+
+
 
 
                 <!-- product bottom section starts -->
-                <div class="product-bottom">
+                <div class="product-bottom" id="product_more">
                     <div class="product-name">
-                        Product details of <?php echo ucfirst(strtolower($row["item_name"]))?>
+                        <span style="font-weight: 100;"> Product details of</span> <strong style="font-weight: bolder;"> <?php echo ucfirst(strtolower($row["item_name"]))?> </strong>
                     </div>
 
                     <div id="div-toggle">
                         <ul class="nav">
-                            <li class="nav-item"><a  data-toggle="tab" class="toggle-btn active" data-target="#item-f-info">Product info</a></li>                        
-                            <li  class="nav-item"><a  data-toggle="tab" class="toggle-btn" data-target="#item-fdback">Feedbacks</a></li>
+                            <li class="nav-item"><a  data-toggle="tab" class="toggle-btn show_PF_btn active" data-target="#item-f-info">Product info</a></li>                        
+                            <li  class="nav-item"><a  data-toggle="tab" class="toggle-btn show_fdb_btn" data-target="#item-fdback">Feedbacks</a></li>
                         </ul>
                     </div>
 
@@ -280,156 +271,85 @@
                         <!-- item feedBack -->
                         <div id="item-fdback" class="tab-pane"> 
                             <div class="owl-carousel owl-theme">
-                                <!-- FEEDBACK -->
-                                <div class="item">
-                                    <div class="feedback">
-                                        <div class="fd-top">
-                                            <!-- user image -->
-                                            <img src="resources/img/user.png" alt="" class="fd-img">
-                                            <div class="fd-user-info">
-                                                <!-- user name -->
-                                                <div class="fd-user-name">Shubrato Debnath</div>
-                                                <div class="fd-rate-date d-flex align-items-center">
-                                                    <div class="rating">
-                                                        <!-- deal rating -->
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star-o"></i>
+
+                                <?php
+                                    $find_item_fdb = "SELECT * FROM `user_feedback`  WHERE item_id = '$food_id' ORDER BY timestamp DESC "; 
+                                    $fdb_query = mysqli_query($con, $find_item_fdb); 
+
+                                    if(mysqli_num_rows($fdb_query)>0){
+
+                                        while($fdb_row = mysqli_fetch_assoc($fdb_query)){
+                                           $fdb_user_id = $fdb_row['user_id'];
+
+                                           $sql_fdb_user_dtl = "SELECT * FROM `user_info` WHERE user_id='$fdb_user_id'";
+                                           if(mysqli_query($con, $sql_fdb_user_dtl)){
+
+                                                $row_user_info = mysqli_fetch_assoc(mysqli_query($con, $sql_fdb_user_dtl));
+
+                                                // feedback info
+                                                $fdb_user_name = $row_user_info['fname']." ".$row_user_info['lname'];
+                                                $rating = $fdb_row['rate'];
+                                                $fdb_user_date = $fdb_row['timestamp'];
+                                                $fdb_user_text = $fdb_row['feedback'];
+                                           }
+
+                                ?>
+                                    <!-- FEEDBACK -->
+                                    <div class="item">
+                                        <div class="feedback">
+                                            <div class="fd-top">
+                                                <!-- user image -->
+                                                <img src="resources/img/user.png" alt="" class="fd-img">
+                                                <div class="fd-user-info">
+                                                    <!-- user name -->
+                                                    <div class="fd-user-name"><?php echo $fdb_user_name?></div>
+                                                    <div class="fd-rate-date d-flex align-items-center">
+                                                        <div class="rating">
+                                                            <!-- deal rating -->
+                                                            <?php include($adRedirect)."_partial-temp/_item-rating.php"?>
+                                                        </div>
+                                                        <!-- feedback time -->
+                                                        <div class="fd-time">
+                                                        <!-- 10th October, 2021 -->
+                                                            <?php 
+                                                                $fdb_user_date = strtotime($fdb_user_date);
+                                                                echo date("d M, Y", $fdb_user_date);
+                                                            ?>
+                                                        </div>
                                                     </div>
-                                                    <div class="fd-time">10th October, 2021</div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- feedback text -->
-                                        <div class="fd-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus quam est quidem, expedita consectetur voluptates nemo, aut odio dignissimos ducimus. Tempora adipisci officiis voluptatem sequi debitis, porro iste perspiciatis atque dignissimos quis eos vero est iusto fugit ad modi deserunt numquam animi aliquam veritatis dolorem quaerat quam quia minima?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FEEDBACK -->
-                                <div class="item">
-                                    <div class="feedback">
-                                        <div class="fd-top">
-                                            <!-- user image -->
-                                            <img src="resources/img/user.png" alt="" class="fd-img">
-                                            <div class="fd-user-info">
-                                                <!-- user name -->
-                                                <div class="fd-user-name">Shubrato Debnath</div>
-                                                <div class="fd-rate-date d-flex align-items-center">
-                                                    <div class="rating">
-                                                        <!-- deal rating -->
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star-o"></i>
-                                                    </div>
-                                                    <div class="fd-time">10th October, 2021</div>
-                                                </div>
+                                            <!-- feedback text -->
+                                            <div class="fd-text">
+                                                <p>
+                                                    <?php echo $fdb_user_text?>
+                                                </p>
                                             </div>
                                         </div>
-
-                                        <!-- feedback text -->
-                                        <div class="fd-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus quam est quidem, expedita consectetur voluptates nemo, aut odio dignissimos ducimus. Tempora adipisci officiis voluptatem sequi debitis, porro iste perspiciatis atque dignissimos quis eos vero est iusto fugit ad modi deserunt numquam animi aliquam veritatis dolorem quaerat quam quia minima?</p>
-                                        </div>
                                     </div>
-                                </div>
-                                <!-- FEEDBACK -->
-                                <div class="item">
-                                    <div class="feedback">
-                                        <div class="fd-top">
-                                            <!-- user image -->
-                                            <img src="resources/img/user.png" alt="" class="fd-img">
-                                            <div class="fd-user-info">
-                                                <!-- user name -->
-                                                <div class="fd-user-name">Shubrato Debnath</div>
-                                                <div class="fd-rate-date d-flex align-items-center">
-                                                    <div class="rating">
-                                                        <!-- deal rating -->
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star-o"></i>
-                                                    </div>
-                                                    <div class="fd-time">10th October, 2021</div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <!-- feedback text -->
-                                        <div class="fd-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus quam est quidem, expedita consectetur voluptates nemo, aut odio dignissimos ducimus. Tempora adipisci officiis voluptatem sequi debitis, porro iste perspiciatis atque dignissimos quis eos vero est iusto fugit ad modi deserunt numquam animi aliquam veritatis dolorem quaerat quam quia minima?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FEEDBACK -->
-                                <div class="item">
-                                    <div class="feedback">
-                                        <div class="fd-top">
-                                            <!-- user image -->
-                                            <img src="resources/img/user.png" alt="" class="fd-img">
-                                            <div class="fd-user-info">
-                                                <!-- user name -->
-                                                <div class="fd-user-name">Shubrato Debnath</div>
-                                                <div class="fd-rate-date d-flex align-items-center">
-                                                    <div class="rating">
-                                                        <!-- deal rating -->
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star-o"></i>
-                                                    </div>
-                                                    <div class="fd-time">10th October, 2021</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <?php
+                                        }//end while
+                                    }else{//end IF
 
-                                        <!-- feedback text -->
-                                        <div class="fd-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus quam est quidem, expedita consectetur voluptates nemo, aut odio dignissimos ducimus. Tempora adipisci officiis voluptatem sequi debitis, porro iste perspiciatis atque dignissimos quis eos vero est iusto fugit ad modi deserunt numquam animi aliquam veritatis dolorem quaerat quam quia minima?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FEEDBACK -->
-                                <div class="item">
-                                    <div class="feedback">
-                                        <div class="fd-top">
-                                            <!-- user image -->
-                                            <img src="resources/img/user.png" alt="" class="fd-img">
-                                            <div class="fd-user-info">
-                                                <!-- user name -->
-                                                <div class="fd-user-name">Shubrato Debnath</div>
-                                                <div class="fd-rate-date d-flex align-items-center">
-                                                    <div class="rating">
-                                                        <!-- deal rating -->
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star"></i>
-                                                        <i class=" fa fa-star-o"></i>
-                                                    </div>
-                                                    <div class="fd-time">10th October, 2021</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    }
+                                ?>
 
-                                        <!-- feedback text -->
-                                        <div class="fd-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus quam est quidem, expedita consectetur voluptates nemo, aut odio dignissimos ducimus. Tempora adipisci officiis voluptatem sequi debitis, porro iste perspiciatis atque dignissimos quis eos vero est iusto fugit ad modi deserunt numquam animi aliquam veritatis dolorem quaerat quam quia minima?</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#">Share your feedbacks</a>
+                
+
+                <!-- ======================== -->
+                <!-- write your feedback section -->
+                <!-- ======================== -->
+                <?php
+                    include("_partial-temp/_write_fdb.php");
+                ?>
+
+
             </div>
         </section>
         <!-- item info section Ends -->
@@ -439,7 +359,7 @@
         }else{
             ?>
                 <script>
-                    location.replace("index.php");
+                    // location.replace("index.php");
                 </script>
             
             <?php

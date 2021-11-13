@@ -125,6 +125,9 @@ body{
     }
 }
 /* ==========LOADER ENDS============= */
+
+
+
 /* ========== Go Top ============= */
 .gotop{
     background-color: transparent;
@@ -134,7 +137,7 @@ body{
     position: fixed;
     bottom: 50%;
     z-index: 50;
-    right: 5%;
+    right: 2%;
     color: white;
     font-size: 3rem;
     display: flex;
@@ -349,7 +352,7 @@ input{
 }
 /* Carousel button */
 
-.rating{
+ .rating{
     color: #feb42b;
     border-color: #feb42b;
     margin-bottom: 1rem ;
@@ -1262,7 +1265,11 @@ nav{
 }
 
 #recommend-item-section .food-item{
-    margin: 0;
+    margin-bottom: 1rem;
+}
+
+#recommend-item-section .item-img{
+    height: 12rem;
 }
 
 
@@ -1579,6 +1586,7 @@ footer hr{
     height: 30rem;
     width: 40rem;
     padding: 2rem;
+    object-fit: cover;
 }
 
 #product-page .rating{
@@ -1781,6 +1789,120 @@ footer hr{
 }
 
 /* feedback section Ends */
+
+/* write feedback sextion */
+.wrt_fdb_btn{
+    text-decoration: none;
+    color: #33C24D;
+    border: 2px solid #33C24D;
+    padding: 1rem 2rem ;
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    transition: .5s;
+}
+
+.wrt_fdb_btn:hover,.wrt_fdb_btn:focus{
+    text-decoration: none;
+    color: white;
+    border-color: #0280f5;
+    background-color: #0280f5;
+}
+
+#wrt_fdb{
+    border: 2px solid rgba(196, 196, 196, 0.815);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#wrt_fdb .fdb_text{
+    width: 100%;
+    background-color: transparent ;
+    border: none;
+    resize: none;
+}
+
+.fdb_text::placeholder{
+    color: rgb(173, 173, 173);
+    font-size: 1.8rem;
+}
+
+
+
+/* input feedback */
+#wrt_fdb .rating {
+    display: inline-block;
+    position: relative;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 3rem;
+}
+  
+#wrt_fdb .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+  
+  #wrt_fdb .rating label:last-child {
+    position: static;
+  }
+  
+  #wrt_fdb .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  #wrt_fdb .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  #wrt_fdb .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  #wrt_fdb .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  #wrt_fdb .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  #wrt_fdb .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  #wrt_fdb .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  #wrt_fdb .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  #wrt_fdb .rating:not(:hover) label input:checked ~ .icon,
+  #wrt_fdb .rating:hover label:hover input ~ .icon {
+    color: #feb42b;
+  }
+  
+  #wrt_fdb .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #feb42b ;
+  }
+/* input feedback ends */
+
+
+/* write feedback sextion ends */
+
+
 /* PRODUCT BOTTOM Ends */
 
 
@@ -1948,7 +2070,7 @@ footer hr{
 }
 
 
-#contact-form input, textarea{
+#contact-form input,#contact-form textarea{
     margin: 1rem;
     padding: 1rem 0;
     border: none;
@@ -1980,7 +2102,7 @@ textarea{
     color: rgba(114, 108, 108, 0.753);
 }
 
-#contact-form input:focus, textarea:focus{
+#contact-form input:focus,#contact-form textarea:focus{
     border-bottom:2px solid royalblue;
     box-shadow: 0px 10px 1rem rgb(65, 105, 225,.1);
 }

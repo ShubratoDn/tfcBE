@@ -469,7 +469,22 @@ $('#item-fdback .owl-carousel').owlCarousel({
 
 
 
+/* ====================================== */
+            /*  ITEM PAGE  */
+/* ====================================== */
 
+try{
+    var PFbtn = document.querySelector('.show_PF_btn');
+    var FDbtn= document.querySelector('.show_fdb_btn');
+
+    function showFdb(){
+        PFbtn.classList.remove('active');
+        FDbtn.classList.add('active');
+    }
+
+}catch(err){
+
+}
 
 
 

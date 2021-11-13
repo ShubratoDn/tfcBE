@@ -56,10 +56,16 @@
                                         <!-- dropdown items -->
                                         <div class="dropdown-items">
                                             <ul>
-                                                <li><a href="#" data-after="Menu">Fast Food</a></li>
-                                                <li><a href="#" data-after="Menu">Dupurer Khabar</a></li>
-                                                <li><a href="#" data-after="Menu">Breakfast</a></li>
-                                                <li><a href="#" data-after="Menu">Dinner</a></li>
+                                                <?php
+                                                    $f_cat_sql = "SELECT * FROM `catagory`";
+                                                    $f_cat_result = mysqli_query($con, $f_cat_sql);
+
+                                                    if(mysqli_num_rows($f_cat_result)>0){
+                                                        while($cat_row = mysqli_fetch_assoc($f_cat_result)){                                                            
+                                                            echo '<li><a href="search.php?category='.$cat_row['cat_name'].'&&cat_id='.$cat_row['cat_id'].'" data-after="Menu">'.ucfirst($cat_row['cat_name']).'</a></li>';
+                                                        }
+                                                    }
+                                                ?>
                                             </ul>
                                         </div>
                                     </li>                                   
@@ -98,7 +104,7 @@
                                                     </div>
                                                     <div class="user-opt">
                                                         <ul>
-                                                            <li><a href="#">Profile</a></li>
+                                                            <li><a href="#">'.$_SESSION['fname'].'</a></li>
                                                             <li><a href="'.$adRedirect.'_partial-temp/logout.php">Logout</a></li>
                                                         </ul>
                                                     </div>

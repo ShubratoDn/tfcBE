@@ -2,8 +2,8 @@
     session_start();
     if(isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
-        echo "<h1>$user_id</h1>";
-        echo $_SESSION['fname'];
+        // echo "<h1>$user_id</h1>";
+        // echo $_SESSION['fname'];
     }
 ?>
 
@@ -46,7 +46,7 @@
         include("_partial-temp/_feature.php");
 
         
-        include("_partial-temp/_deal-recommand.php");
+        include("_partial-temp/_deal-recommend.php");
 
         
         include("_partial-temp/_trend-items.php");

@@ -1,6 +1,7 @@
 <?php
     // error_reporting(E_ERROR | E_PARSE | E_NOTICE);
 
+
     // LOGIN INFORMATION
     @$email = $_POST["email"];
     @$password = $_POST["password"];
@@ -33,12 +34,22 @@
                     @$error .= "Incorrect password";
                 }else{
                     // if password is correct
-                    if(!isset($_SESSION['user_id'])){
+                    if(isset($food_id)){
                         ?>                        
                             <script>
-                                location.reload();
+                                location.replace('<?php echo "item.php?item_id=$food_id"?>');
                             </script>
                         <?php
+                    
+                    }else{
+                        if(!isset($_SESSION['user_id'])){
+                            ?>                        
+                                <script>
+                                    location.reload();
+                                </script>
+                            <?php
+                        
+                        }
                     }
 
                     $_SESSION["fname"] = $fname;
@@ -61,7 +72,7 @@
 <div class="modal-box">
     <!-- LOGIN FORM -->
     <div class="login">
-        <form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" class="login-form" method="POST">
+        <form action="" class="login-form" method="POST">
             <h2 class=" text-center login-title">Login</h2>
 
             <div class='alert alert-danger mx-3 font-12 font-weight-bold border-0 p-0'>

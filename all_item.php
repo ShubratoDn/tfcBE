@@ -69,8 +69,12 @@
             <div class="item-container mt-5">
                 <!-- food item card -->
                 <?php
+                    if($type ==='Trend Items'){
+                        $sql = "SELECT * FROM `item_info` WHERE item_rating = 5 ORDER BY item_id DESC";
+                    }else{
+                        $sql = "SELECT * FROM `item_info` WHERE item_cat_id IN ($cat)  ORDER BY item_id DESC";
+                    }
 
-                    $sql = "SELECT * FROM `item_info` WHERE item_cat_id IN ($cat)  ORDER BY item_id DESC";
                     $result = mysqli_query($con, $sql);
 
                     if($result){
