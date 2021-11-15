@@ -5,8 +5,7 @@
     if(!isset($food_id)){
         ?>
             <script>
-                // location.replace("<?php
-                // echo "index.php"?>");
+                location.replace("<?php echo "index.php"?>");
             </script>
         <?php 
     }
@@ -359,7 +358,7 @@
         }else{
             ?>
                 <script>
-                    // location.replace("index.php");
+                    location.replace("index.php");
                 </script>
             
             <?php

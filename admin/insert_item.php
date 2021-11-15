@@ -95,6 +95,10 @@
 
                               if(!$rate){
                                 $rate = 5;
+                              }else{
+                                if($rate >5 || $rate<0){
+                                  $error = "<p>Invalid Rate</p>";
+                                }
                               }
 
                               // ITEM IMAGE SIZE SETTING

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2021 at 04:54 PM
+-- Generation Time: Nov 15, 2021 at 06:40 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -86,7 +86,8 @@ INSERT INTO `item_info` (`item_id`, `item_name`, `item_cat_id`, `item_img`, `ite
 (18, 'Neapolitan Pizza.', 9, 'dc612b80ceb097eecc78authentic-neapolitan-margherita-pizza-.jpg', 400, 20, 4, 0, 'Neapolitan pizza (Italian: pizza napoletana) also known as Naples-style pizza, is a style of pizza made with tomatoes and mozzarella cheese.', 'Arifa Anwer', '------------', '2021-11-02'),
 (21, 'Sicilian Pizza', 9, '1316ec409ab0c60131afmerlin_147457287_3700e22.jpg', 350, 6, 3.5, 0, 'Sicilian Pizza', 'Arifa Anwer', '------------', '2021-11-02'),
 (22, 'Apple pie', 14, '402fa78200affee4e8d5food7.jpg', 240, 22, 4.5, 0, '', '', '', '2021-11-02'),
-(23, 'Rosho Golla', 14, 'f650c31f130a8c957c6cfood12.jpg', 250, 2, 5, 0, '------------ ONE OF FAMOUS FOOD ITEM --------------', 'Rony Mistanno Vandar', 'misty', '2021-11-02');
+(23, 'Rosho Golla', 14, 'f650c31f130a8c957c6cfood12.jpg', 250, 2, 5, 0, '------------ ONE OF FAMOUS FOOD ITEM --------------', 'Rony Mistanno Vandar', 'misty', '2021-11-02'),
+(24, 'cheese pizza', 10, '9b85249ea3a0d47fbdab83917422-fish-dish-roasted-dorada-and-vegetables.jpg', 200, 10, 15, 0, '', 'Tonushree Mukharji', 'misty', '2021-11-15');
 
 -- --------------------------------------------------------
 
@@ -116,7 +117,8 @@ INSERT INTO `user_info` (`user_id`, `fname`, `lname`, `gender`, `email`, `passwo
 (9, 'Admin', 'Admin', 'male', 'admin@gmail.com', 'dcddb75469b4b4875094e14561e573d8', '00000', '', '22571c9ea85b98167a6e6bdc8bb6e42c', '2021-10-18 17:19:18'),
 (10, 'Sourav', 'Debnath', 'male', 'souravdeb32665@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '11111', '', '908e3c9f2509f027a697ec4dcfe97534', '2021-10-19 09:02:14'),
 (11, 'Akash', 'DN', 'male', 'akash@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '11111', '', '0238c5888ae5d9d8f18a753bb463f119', '2021-11-11 16:33:40'),
-(12, 'Hridoy ', 'Debnath', 'male', 'hridoy@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '11111', '', 'ab7b482b7ca2b782ea8bff86c3147e2e', '2021-11-13 11:33:29');
+(12, 'Hridoy ', 'Debnath', 'male', 'hridoy@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '11111', '', 'ab7b482b7ca2b782ea8bff86c3147e2e', '2021-11-13 11:33:29'),
+(13, 'Sajib', 'Debnath', 'other', 'sajib@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '11111', '', 'b6fbb977d43b803497cb9d2c075aef92', '2021-11-14 05:38:19');
 
 --
 -- Indexes for dumped tables
@@ -154,13 +156,13 @@ ALTER TABLE `catagory`
 -- AUTO_INCREMENT for table `item_info`
 --
 ALTER TABLE `item_info`
-  MODIFY `item_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `item_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
