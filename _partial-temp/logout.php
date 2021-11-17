@@ -2,7 +2,9 @@
     session_start();
 
     //removing password cookie
-    // setcookie("user_password","", time()- 1000);
+    if(isset($_COOKIE['user_password'])){
+        setcookie("user_password", "" , time()-3600);
+    }
 
     session_destroy();
     ?>
