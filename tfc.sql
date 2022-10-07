@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 06:40 PM
+-- Generation Time: Oct 07, 2022 at 07:43 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `tfc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL,
+  `admin_name` varchar(100) NOT NULL,
+  `admin_post` varchar(20) NOT NULL,
+  `admin_email` varchar(200) NOT NULL,
+  `password` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_post`, `admin_email`, `password`) VALUES
+(1, 'Shubrato Debnath', 'Owner', 'shubratodn44985@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f');
 
 -- --------------------------------------------------------
 
@@ -86,8 +107,29 @@ INSERT INTO `item_info` (`item_id`, `item_name`, `item_cat_id`, `item_img`, `ite
 (18, 'Neapolitan Pizza.', 9, 'dc612b80ceb097eecc78authentic-neapolitan-margherita-pizza-.jpg', 400, 20, 4, 0, 'Neapolitan pizza (Italian: pizza napoletana) also known as Naples-style pizza, is a style of pizza made with tomatoes and mozzarella cheese.', 'Arifa Anwer', '------------', '2021-11-02'),
 (21, 'Sicilian Pizza', 9, '1316ec409ab0c60131afmerlin_147457287_3700e22.jpg', 350, 6, 3.5, 0, 'Sicilian Pizza', 'Arifa Anwer', '------------', '2021-11-02'),
 (22, 'Apple pie', 14, '402fa78200affee4e8d5food7.jpg', 240, 22, 4.5, 0, '', '', '', '2021-11-02'),
-(23, 'Rosho Golla', 14, 'f650c31f130a8c957c6cfood12.jpg', 250, 2, 5, 0, '------------ ONE OF FAMOUS FOOD ITEM --------------', 'Rony Mistanno Vandar', 'misty', '2021-11-02'),
+(23, 'Rosho Golla', 14, 'f650c31f130a8c957c6cfood12.jpg', 250, 2, 4, 1, '------------ ONE OF FAMOUS FOOD ITEM --------------', 'Rony Mistanno Vandar', 'misty', '2021-11-02'),
 (24, 'cheese pizza', 10, '9b85249ea3a0d47fbdab83917422-fish-dish-roasted-dorada-and-vegetables.jpg', 200, 10, 15, 0, '', 'Tonushree Mukharji', 'misty', '2021-11-15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_feedback`
+--
+
+CREATE TABLE `user_feedback` (
+  `item_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `rate` int(11) NOT NULL,
+  `feedback` varchar(500) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_feedback`
+--
+
+INSERT INTO `user_feedback` (`item_id`, `user_id`, `rate`, `feedback`, `timestamp`) VALUES
+(23, 8, 4, 'delicious food', '2022-10-07 17:32:35');
 
 -- --------------------------------------------------------
 
@@ -125,6 +167,12 @@ INSERT INTO `user_info` (`user_id`, `fname`, `lname`, `gender`, `email`, `passwo
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
 -- Indexes for table `catagory`
 --
 ALTER TABLE `catagory`
@@ -145,6 +193,12 @@ ALTER TABLE `user_info`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `catagory`
